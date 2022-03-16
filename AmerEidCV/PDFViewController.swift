@@ -67,7 +67,11 @@ class PDFViewController: UIViewController {
             
             // all labels need their labels drawn while the layer itself can be rendered
             for label in cvView.labelsArray {
-                label.drawText(in: label.frame)
+                // I have to get the frame of the labels relative to cvView in order to draw text (it ignores frame offset from superview)
+                guard let realFrame = label.superview?.convert(label.frame, to: cvView) else {
+                    continue
+                }
+                label.drawText(in: realFrame)
             }
         }
         pdfView.document = PDFDocument(data: pdfData)
