@@ -8,10 +8,31 @@
 import UIKit
 
 class DetailsView: CVSubview {
-    private let titleLabel = UILabel()
-    private let subtitleLabel = UILabel()
-    private let dateLabel = UILabel()
-    private let locationLabel = UILabel()
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Futura-Medium", size: 12)
+        label.textColor = .darkGray
+        return label
+    }()
+    
+    private let subtitleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Futura", size: 12)
+        return label
+    }()
+    
+    private let dateLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Futura-Medium", size: 12)
+        label.textColor = .darkGray
+        return label
+    }()
+    
+    private let locationLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Futura", size: 12)
+        return label
+    }()
     
     init(model: DetailsModel) {
         titleLabel.text = model.title

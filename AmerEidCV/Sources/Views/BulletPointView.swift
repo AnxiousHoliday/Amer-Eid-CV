@@ -11,6 +11,7 @@ class BulletPointView: CVSubview {
     private let bulletPointLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.font = UIFont(name: "Futura", size: 12)
         return label
     }()
     

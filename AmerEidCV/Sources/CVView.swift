@@ -43,7 +43,25 @@ public class CVView: UIView {
      BulletPointModel(text: "Co-founded a parking app for emerging markets (www.weareparkr.com)"),
      BulletPointModel(text: "Pitched to multiple investors throughout and received 100,000 USD"),
      BulletPointModel(text: "Underwent acceleration in Beirut and San Francisco by Speed@BDD, AUBCRinn, LebNet Ignite, and French Tech Hub, encompassing all aspects of a tech entrepreneur"),
-     BulletPointModel(text: "Conceptualized, sketched, and managed the development and release of the app and later features")]
+     BulletPointModel(text: "Conceptualized, sketched, and managed the development and release of the app and later features"),
+    
+     HeaderModel(title: "Education"),
+    
+     DetailsModel(title: "American University Of Beirut",
+                  subtitle: "Bachelor of Science, Computer Science",
+                  date: "June 2016",
+                  location: "Beirut, Lebanon"),
+     
+     BulletPointModel(text: "Relevant modules include Algorithms and Data Structures, Software Engineering, Discrete Structures, etc"),
+     BulletPointModel(text: "Conducted iOS workshops focused on practical and relevant skills"),
+     
+     HeaderModel(title: "Skills & Interests"),
+    
+     BulletPointModel(text: "Skills: Strong debugging skills ; Knowledge of iOS SDK performance tools and optimization techniques ; Product management ; Product design ; Adobe illustrator ; Sketch ; UX design ; Multi-threading ; Memory management ; Source control management"),
+     BulletPointModel(text: "Programing Languages & Frameworks: Swift ; Objective-C ; PHP ; Javascript ; Java ; Python ; Kotlin ; C++ ; C# ; RxCocoa ; RxSwift ; Realm ; IGListKit ; PinLayout ; SnapKit ; Laravel ; Socket.IO"),
+     BulletPointModel(text: "Languages: English (native) ; Arabic (fluent) ; Spanish (elementary)"),
+     BulletPointModel(text: "Interests: Astronomy ; Reddit ; Entrepreneurship ; Dota 2 ; Banking")
+    ]
     
     var labelsArray: [UILabel] =  []
     
@@ -63,7 +81,7 @@ public class CVView: UIView {
             return CVSubviewFactory.getView(model: model)
         }
         
-        let pageSidePadding: CGFloat = 10
+        let pageSidePadding: CGFloat = 40
         
         var prevView: CVSubview?
         cvSubviews.forEach { cvSubview in
