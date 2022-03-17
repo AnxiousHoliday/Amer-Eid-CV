@@ -15,115 +15,63 @@ public class CVView: UIView {
     private let pixelsPerInch: CGFloat = 72.0
     private let pdfWidth: CGFloat
     private let pdfHeight: CGFloat
+    private let cvViewHeader = CVMainHeaderView()
+    private let cvExperienceSectionHeaderView = CVSectionHeaderView(sectionHeaderTitle: "Experience")
+    private let cvExperienceSubSectionHeaderView = CVSubSectionHeaderView(leftTitleString: "Lead iOS Engineer".basicTextAppearance(),
+                                                                          leftSubtitleString: "Anghami".basicTextAppearance(),
+                                                                          rightTitleString: "April 2020 - Present".basicTextAppearance(),
+                                                                          rightSubtitleString: "Abu Dhabi, United Arab Emirates".basicTextAppearance())
+    private let cvExperienceBulletPointView1 = CVBulletPointView(bulletPointString: "Anghami is the leading music streaming platform in the MENA region with over 80 million users".secondaryTextAppearance())
+    private let cvExperienceBulletPointView2 = CVBulletPointView(bulletPointString: "Responsible for maintaining app performance by profiling using instruments in order to prevent memory leaks, main thread blockage, overuse of energy, and thread mismanagement".secondaryTextAppearance())
+    
+    
+    
+    private let models: [Any] = [PersonalDataModel(name: "Amer Eid",
+                                                   phone: "+971506832163",
+                                                   location: "Abu Dhabi, United Arab Emirates",
+                                                   email: "amereid92@gmail.com",
+                                                   githubURL: URL(string: "https://github.com/amereid")!,
+                                                   linkedInURL: URL(string: "https://www.linkedin.com/in/amer-eid92/")!)]
+    
+    var labelsArray: [UILabel] =  []
     
     init() {
         pdfWidth = pixelsPerInch * pdfWidthInInches
         pdfHeight = pixelsPerInch * pdfHeightInInches
         super.init(frame: CGRect(x: 0, y: 0, width: pdfWidth, height: pdfHeight))
-        setupViews()
+        commonInit()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    let myNameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Amer Eid"
-        label.textColor = .black
-        label.font = UIFont(name: "Lobster1.3", size: 28)
-        return label
-    }()
-    
-    let myEmailAddressLabel: UILabel = {
-        let attributedString = NSMutableAttributedString()
-        attributedString.append("Email ".secondaryBoldTextAppearance())
-        attributedString.append("amereid92@gmail.com".basicTextAppearance())
+    private func commonInit() {
+        let cvSubviews: [CVSubview] = models.compactMap { model in
+            return CVViewFactory.getView(model: model)
+        }
         
-        let label = UILabel()
-        label.attributedText = attributedString
-        return label
-    }()
-    
-    let myPhoneNumberLabel: UILabel = {
-        let attributedString = NSMutableAttributedString()
-        attributedString.append("Phone ".secondaryBoldTextAppearance())
-        attributedString.append("+971506832163".basicTextAppearance())
+        let pageSidePadding: CGFloat = 10
         
-        let label = UILabel()
-        label.attributedText = attributedString
-        return label
-    }()
-    
-    let myAddressLabel: UILabel = {
-        let attributedString = NSMutableAttributedString()
-        attributedString.append("Location ".secondaryBoldTextAppearance())
-        attributedString.append("Abu Dhabi, United Arab Emirates".basicTextAppearance())
-        
-        let label = UILabel()
-        label.attributedText = attributedString
-        return label
-    }()
-    
-    let myLinkedInProfileLabel: UILabel = {
-        let attributedString = NSMutableAttributedString()
-        attributedString.append("LinkedIn ".secondaryBoldTextAppearance())
-        attributedString.append("Press Me".basicLinkAppearance(link: URL(string: "https://www.linkedin.com/in/amer-eid92/")!))
-        
-        let label = UILabel()
-        label.attributedText = attributedString
-        return label
-    }()
-    
-    let myGitHubProfileLabel: UILabel = {
-        let attributedString = NSMutableAttributedString()
-        attributedString.append("GitHub ".secondaryBoldTextAppearance())
-        attributedString.append("Press Me".basicLinkAppearance(link: URL(string: "https://github.com/amereid")!))
-        
-        let label = UILabel()
-        label.attributedText = attributedString
-        return label
-    }()
-    
-    private func setupViews() {
-        createTopContainer()
-        
-        layout()
-        
-        for label in labelsArray {
-            label.isHidden = true
+        var prevView: CVSubview?
+        cvSubviews.forEach { cvSubview in
+            self.addSubview(cvSubview)
+            
+            if let prevView = prevView {
+                cvSubview.pin.horizontally(pageSidePadding)
+                cvSubview.layout()
+                cvSubview.pin.wrapContent(.vertically).horizontally(pageSidePadding).below(of: prevView).marginTop(5)
+            } else {
+                cvSubview.pin.top(pageSidePadding).horizontally(pageSidePadding)
+                cvSubview.layout()
+                cvSubview.pin.wrapContent(.vertically).top(pageSidePadding).horizontally(pageSidePadding)
+            }
+            labelsArray.append(contentsOf: cvSubview.labelsArray())
+            cvSubview.hideLabels()
+            prevView = cvSubview
         }
     }
-    
-    private let topContainer = UIView()
-    
-    private func layout() {
-        topContainer.pin.top(10).horizontally(10)
-        myNameLabel.pin.sizeToFit().start().top()
-        myEmailAddressLabel.pin.sizeToFit().top().end()
-        myPhoneNumberLabel.pin.sizeToFit().below(of: myEmailAddressLabel).marginTop(10).end()
-        myAddressLabel.pin.sizeToFit().below(of: myPhoneNumberLabel).marginTop(10).end()
-        myGitHubProfileLabel.pin.sizeToFit().below(of: myAddressLabel).marginTop(10).end()
-        myLinkedInProfileLabel.pin.sizeToFit().before(of: myGitHubProfileLabel, aligned: .center).marginEnd(10)
-        
-        topContainer.pin.wrapContent(.vertically).top(10).horizontally(10)
-    }
-    
-    lazy var labelsArray: [UILabel] = [myNameLabel, myEmailAddressLabel, myPhoneNumberLabel, myAddressLabel, myLinkedInProfileLabel, myGitHubProfileLabel]
-    
-    private func createTopContainer() {
-        topContainer.addSubview(myNameLabel)
-        topContainer.addSubview(myEmailAddressLabel)
-        topContainer.addSubview(myPhoneNumberLabel)
-        topContainer.addSubview(myAddressLabel)
-        topContainer.addSubview(myLinkedInProfileLabel)
-        topContainer.addSubview(myGitHubProfileLabel)
-
-        addSubview(topContainer)
-//        topContainer.backgroundColor = .red
-    }
 }
-
 
 extension String {
     fileprivate static let basicTextFont = UIFont(name: "Futura", size: 12) ?? .systemFont(ofSize: 12)
@@ -139,6 +87,10 @@ extension String {
     
     func secondaryBoldTextAppearance() -> NSAttributedString {
         return NSAttributedString(string: self, attributes: [.foregroundColor : UIColor.darkGray, .font: String.basicBoldTextFont])
+    }
+    
+    func secondaryTextAppearance() -> NSAttributedString {
+        return NSAttributedString(string: self, attributes: [.foregroundColor : UIColor.darkGray, .font: String.basicTextFont])
     }
     
 }
@@ -172,5 +124,16 @@ extension NSAttributedString {
     
     func link(_ link: URL) -> NSAttributedString {
         self.apply([.link: link])
+    }
+}
+
+class CVViewFactory {
+    static func getView(model: Any) -> CVSubview? {
+        switch model {
+        case let personaDataModel as PersonalDataModel:
+            return PersonalDataView()
+        default:
+            return nil
+        }
     }
 }
