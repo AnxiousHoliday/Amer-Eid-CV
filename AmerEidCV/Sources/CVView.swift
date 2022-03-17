@@ -15,23 +15,35 @@ public class CVView: UIView {
     private let pixelsPerInch: CGFloat = 72.0
     private let pdfWidth: CGFloat
     private let pdfHeight: CGFloat
-    private let cvViewHeader = CVMainHeaderView()
-    private let cvExperienceSectionHeaderView = CVSectionHeaderView(sectionHeaderTitle: "Experience")
-    private let cvExperienceSubSectionHeaderView = CVSubSectionHeaderView(leftTitleString: "Lead iOS Engineer".basicTextAppearance(),
-                                                                          leftSubtitleString: "Anghami".basicTextAppearance(),
-                                                                          rightTitleString: "April 2020 - Present".basicTextAppearance(),
-                                                                          rightSubtitleString: "Abu Dhabi, United Arab Emirates".basicTextAppearance())
-    private let cvExperienceBulletPointView1 = CVBulletPointView(bulletPointString: "Anghami is the leading music streaming platform in the MENA region with over 80 million users".secondaryTextAppearance())
-    private let cvExperienceBulletPointView2 = CVBulletPointView(bulletPointString: "Responsible for maintaining app performance by profiling using instruments in order to prevent memory leaks, main thread blockage, overuse of energy, and thread mismanagement".secondaryTextAppearance())
-    
-    
-    
-    private let models: [Any] = [PersonalDataModel(name: "Amer Eid",
-                                                   phone: "+971506832163",
-                                                   location: "Abu Dhabi, United Arab Emirates",
-                                                   email: "amereid92@gmail.com",
-                                                   githubURL: URL(string: "https://github.com/amereid")!,
-                                                   linkedInURL: URL(string: "https://www.linkedin.com/in/amer-eid92/")!)]
+
+    private let models: [Any] =
+    [PersonalDataModel(name: "Amer Eid",
+                       phone: "+971506832163",
+                       location: "Abu Dhabi, United Arab Emirates",
+                       email: "amereid92@gmail.com",
+                       githubURL: URL(string: "https://github.com/amereid")!,
+                       linkedInURL: URL(string: "https://www.linkedin.com/in/amer-eid92/")!),
+     
+     HeaderModel(title: "Experience"),
+     
+     DetailsModel(title: "Anghami",
+                  subtitle: "Lead iOS Engineer",
+                  date: "April 2020 - Present",
+                  location: "Abu Dhabi, United Arab Emirates"),
+     
+     BulletPointModel(text: "Anghami is the leading music streaming platform in the MENA region with over 80 million users"),
+     BulletPointModel(text: "Sole lead developer of the iOS platform which boasts a rating of 4.7 (700K ratings) on the App Store"),
+     BulletPointModel(text: "Led development for core features such as the Audio Engine, Live Radios, Stories, In-App Purchases & Subscriptions, Chat, etc"),
+     
+     DetailsModel(title: "Parkr (Startup)",
+                  subtitle: "Co-founder & CTO",
+                  date: "June 2016 – June 2017",
+                  location: "Beirut, Lebanon"),
+     
+     BulletPointModel(text: "Co-founded a parking app for emerging markets (www.weareparkr.com)"),
+     BulletPointModel(text: "Pitched to multiple investors throughout and received 100,000 USD"),
+     BulletPointModel(text: "Underwent acceleration in Beirut and San Francisco by Speed@BDD, AUBCRinn, LebNet Ignite, and French Tech Hub, encompassing all aspects of a tech entrepreneur"),
+     BulletPointModel(text: "Conceptualized, sketched, and managed the development and release of the app and later features")]
     
     var labelsArray: [UILabel] =  []
     
@@ -48,7 +60,7 @@ public class CVView: UIView {
     
     private func commonInit() {
         let cvSubviews: [CVSubview] = models.compactMap { model in
-            return CVViewFactory.getView(model: model)
+            return CVSubviewFactory.getView(model: model)
         }
         
         let pageSidePadding: CGFloat = 10
@@ -124,16 +136,5 @@ extension NSAttributedString {
     
     func link(_ link: URL) -> NSAttributedString {
         self.apply([.link: link])
-    }
-}
-
-class CVViewFactory {
-    static func getView(model: Any) -> CVSubview? {
-        switch model {
-        case let personaDataModel as PersonalDataModel:
-            return PersonalDataView()
-        default:
-            return nil
-        }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  CVSectionHeaderView.swift
+//  HeaderView.swift
 //  AmerEidCV
 //
 //  Created by Amer on 3/17/22.
@@ -7,9 +7,7 @@
 
 import UIKit
 
-class CVSectionHeaderView: UIView {
-    lazy var labelsArray: [UILabel] =  [sectionHeaderLabel]
-    
+class HeaderView: CVSubview {
     private let sectionHeaderLabel: UILabel = {
         let label = UILabel()
         label.text = "Section Header Title"
@@ -18,8 +16,8 @@ class CVSectionHeaderView: UIView {
         return label
     }()
     
-    init(sectionHeaderTitle: String) {
-        sectionHeaderLabel.text = sectionHeaderTitle
+    init(model: HeaderModel) {
+        sectionHeaderLabel.text = model.title
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         commonInit()
     }
@@ -34,8 +32,8 @@ class CVSectionHeaderView: UIView {
         layout()
     }
     
-    func layout() {
-        sectionHeaderLabel.pin.sizeToFit().start().top()
+    override func layout() {
+        sectionHeaderLabel.pin.horizontally().sizeToFit(.width).top()
         pin.wrapContent(.vertically)
     }
     
