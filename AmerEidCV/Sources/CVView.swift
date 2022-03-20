@@ -24,6 +24,8 @@ public class CVView: UIView {
                        githubURL: URL(string: "https://github.com/amereid")!,
                        linkedInURL: URL(string: "https://www.linkedin.com/in/amer-eid92/")!),
      
+     SummaryModel(text: "Lead iOS developer with over 9 years of experience leading the creation of complex user focused software applications at the highest level of quality and efficiency. Led a team of 4 to create the # 1 music streaming app in mena with over 2 million DAUs, while demonstrating strength in adaptability, clear communication, and relentless focus on customer experience."),
+     
      HeaderModel(title: "Experience"),
      
      DetailsModel(title: "Anghami",
@@ -51,10 +53,7 @@ public class CVView: UIView {
                   subtitle: "Bachelor of Science, Computer Science",
                   date: "June 2016",
                   location: "Beirut, Lebanon"),
-     
-     BulletPointModel(text: "Relevant modules include Algorithms and Data Structures, Software Engineering, Discrete Structures, etc"),
-     BulletPointModel(text: "Conducted iOS workshops focused on practical and relevant skills"),
-     
+
      HeaderModel(title: "Skills & Interests"),
     
      BulletPointModel(text: "Skills: Strong debugging skills ; Knowledge of iOS SDK performance tools and optimization techniques ; Product management ; Product design ; Adobe illustrator ; Sketch ; UX design ; Multi-threading ; Memory management ; Source control management"),
@@ -66,6 +65,10 @@ public class CVView: UIView {
     var labelsArray: [UILabel] =  []
     
     init() {
+        UIFont.familyNames.forEach({ familyName in
+            let fontNames = UIFont.fontNames(forFamilyName: familyName)
+            print(familyName, fontNames)
+        })
         pdfWidth = pixelsPerInch * pdfWidthInInches
         pdfHeight = pixelsPerInch * pdfHeightInInches
         super.init(frame: CGRect(x: 0, y: 0, width: pdfWidth, height: pdfHeight))
@@ -81,7 +84,7 @@ public class CVView: UIView {
             return CVSubviewFactory.getView(model: model)
         }
         
-        let pageSidePadding: CGFloat = 40
+        let pageSidePadding: CGFloat = 30
         
         var prevView: CVSubview?
         cvSubviews.forEach { cvSubview in
@@ -90,11 +93,10 @@ public class CVView: UIView {
             if let prevView = prevView {
                 cvSubview.pin.horizontally(pageSidePadding)
                 cvSubview.layout()
-                cvSubview.pin.wrapContent(.vertically).horizontally(pageSidePadding).below(of: prevView).marginTop(5)
+                cvSubview.pin.horizontally(pageSidePadding).below(of: prevView).marginTop(5)
             } else {
                 cvSubview.pin.top(pageSidePadding).horizontally(pageSidePadding)
                 cvSubview.layout()
-                cvSubview.pin.wrapContent(.vertically).top(pageSidePadding).horizontally(pageSidePadding)
             }
             labelsArray.append(contentsOf: cvSubview.labelsArray())
             cvSubview.hideLabels()
@@ -104,8 +106,8 @@ public class CVView: UIView {
 }
 
 extension String {
-    fileprivate static let basicTextFont = UIFont(name: "Futura", size: 12) ?? .systemFont(ofSize: 12)
-    fileprivate static let basicBoldTextFont = UIFont(name: "Futura-Bold", size: 12) ?? .systemFont(ofSize: 12, weight: .bold)
+    fileprivate static let basicTextFont = UIFont(name: "OpenSans-Regular", size: 12) ?? .systemFont(ofSize: 12)
+    fileprivate static let basicBoldTextFont = UIFont(name: "OpenSans-Bold", size: 12) ?? .systemFont(ofSize: 12, weight: .bold)
     
     func basicTextAppearance() -> NSAttributedString {
         return NSAttributedString(string: self, attributes: [.foregroundColor : UIColor.black, .font: String.basicTextFont])

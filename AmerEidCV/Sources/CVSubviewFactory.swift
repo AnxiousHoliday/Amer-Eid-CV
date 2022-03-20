@@ -18,6 +18,8 @@ class CVSubviewFactory {
             return DetailsView(model: detailsModel)
         case let bulletPointModel as BulletPointModel:
             return BulletPointView(model: bulletPointModel)
+        case let summaryModel as SummaryModel:
+            return SummaryView(model: summaryModel)
         default:
             return nil
         }

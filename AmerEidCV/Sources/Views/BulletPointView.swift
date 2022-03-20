@@ -11,7 +11,8 @@ class BulletPointView: CVSubview {
     private let bulletPointLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.font = UIFont(name: "Futura", size: 12)
+        label.textColor = .black
+        label.font = UIFont(name: "OpenSans-Regular", size: 10)
         return label
     }()
     
@@ -40,7 +41,7 @@ class BulletPointView: CVSubview {
     }
     
     override func layout() {
-        bulletPointIcon.pin.start(10).top(15)
+        bulletPointIcon.pin.start(5).top(15)
         bulletPointLabel.pin.after(of: bulletPointIcon).marginStart(10).top(10).end(10).sizeToFit(.width)
         bulletPointLabel.pin.after(of: bulletPointIcon).marginStart(10).top(10).end(10)
         pin.wrapContent(.vertically)

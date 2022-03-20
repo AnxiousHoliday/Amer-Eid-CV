@@ -29,6 +29,20 @@
 		19D4C7C727E3D19B0094F0F6 /* BulletPointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C7C627E3D19B0094F0F6 /* BulletPointModel.swift */; };
 		19D4C7C927E3D1CA0094F0F6 /* BulletPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C7C827E3D1CA0094F0F6 /* BulletPointView.swift */; };
 		19D4C7CB27E3D3EF0094F0F6 /* CVSubviewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C7CA27E3D3EF0094F0F6 /* CVSubviewFactory.swift */; };
+		19D4C84B27E79D6B0094F0F6 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C84A27E79D6B0094F0F6 /* SummaryView.swift */; };
+		19D4C84D27E79DC80094F0F6 /* SummaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C84C27E79DC80094F0F6 /* SummaryModel.swift */; };
+		19D4C85A27E7A4F70094F0F6 /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D4C84E27E7A4F70094F0F6 /* OpenSans-Medium.ttf */; };
+		19D4C85B27E7A4F70094F0F6 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D4C84F27E7A4F70094F0F6 /* OpenSans-Light.ttf */; };
+		19D4C85C27E7A4F70094F0F6 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D4C85027E7A4F70094F0F6 /* OpenSans-Bold.ttf */; };
+		19D4C85D27E7A4F70094F0F6 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D4C85127E7A4F70094F0F6 /* OpenSans-SemiBold.ttf */; };
+		19D4C85E27E7A4F70094F0F6 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D4C85227E7A4F70094F0F6 /* OpenSans-BoldItalic.ttf */; };
+		19D4C85F27E7A4F70094F0F6 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D4C85327E7A4F70094F0F6 /* OpenSans-ExtraBold.ttf */; };
+		19D4C86027E7A4F70094F0F6 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D4C85427E7A4F70094F0F6 /* OpenSans-LightItalic.ttf */; };
+		19D4C86127E7A4F70094F0F6 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D4C85527E7A4F70094F0F6 /* OpenSans-Italic.ttf */; };
+		19D4C86227E7A4F70094F0F6 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D4C85627E7A4F70094F0F6 /* OpenSans-Regular.ttf */; };
+		19D4C86327E7A4F70094F0F6 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D4C85727E7A4F70094F0F6 /* OpenSans-SemiBoldItalic.ttf */; };
+		19D4C86427E7A4F70094F0F6 /* OpenSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D4C85827E7A4F70094F0F6 /* OpenSans-MediumItalic.ttf */; };
+		19D4C86527E7A4F70094F0F6 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D4C85927E7A4F70094F0F6 /* OpenSans-ExtraBoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +87,20 @@
 		19D4C7C627E3D19B0094F0F6 /* BulletPointModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletPointModel.swift; sourceTree = "<group>"; };
 		19D4C7C827E3D1CA0094F0F6 /* BulletPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletPointView.swift; sourceTree = "<group>"; };
 		19D4C7CA27E3D3EF0094F0F6 /* CVSubviewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSubviewFactory.swift; sourceTree = "<group>"; };
+		19D4C84A27E79D6B0094F0F6 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		19D4C84C27E79DC80094F0F6 /* SummaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryModel.swift; sourceTree = "<group>"; };
+		19D4C84E27E7A4F70094F0F6 /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Medium.ttf"; sourceTree = "<group>"; };
+		19D4C84F27E7A4F70094F0F6 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		19D4C85027E7A4F70094F0F6 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		19D4C85127E7A4F70094F0F6 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		19D4C85227E7A4F70094F0F6 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		19D4C85327E7A4F70094F0F6 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		19D4C85427E7A4F70094F0F6 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		19D4C85527E7A4F70094F0F6 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		19D4C85627E7A4F70094F0F6 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		19D4C85727E7A4F70094F0F6 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		19D4C85827E7A4F70094F0F6 /* OpenSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		19D4C85927E7A4F70094F0F6 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +197,18 @@
 			isa = PBXGroup;
 			children = (
 				19533DC127E26A80004D5AE5 /* Lobster.otf */,
+				19D4C85027E7A4F70094F0F6 /* OpenSans-Bold.ttf */,
+				19D4C85227E7A4F70094F0F6 /* OpenSans-BoldItalic.ttf */,
+				19D4C85327E7A4F70094F0F6 /* OpenSans-ExtraBold.ttf */,
+				19D4C85927E7A4F70094F0F6 /* OpenSans-ExtraBoldItalic.ttf */,
+				19D4C85527E7A4F70094F0F6 /* OpenSans-Italic.ttf */,
+				19D4C84F27E7A4F70094F0F6 /* OpenSans-Light.ttf */,
+				19D4C85427E7A4F70094F0F6 /* OpenSans-LightItalic.ttf */,
+				19D4C84E27E7A4F70094F0F6 /* OpenSans-Medium.ttf */,
+				19D4C85827E7A4F70094F0F6 /* OpenSans-MediumItalic.ttf */,
+				19D4C85627E7A4F70094F0F6 /* OpenSans-Regular.ttf */,
+				19D4C85127E7A4F70094F0F6 /* OpenSans-SemiBold.ttf */,
+				19D4C85727E7A4F70094F0F6 /* OpenSans-SemiBoldItalic.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -177,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				19D4C7B727E39E010094F0F6 /* PersonalDataModel.swift */,
+				19D4C84C27E79DC80094F0F6 /* SummaryModel.swift */,
 				19D4C7BE27E3A4FA0094F0F6 /* HeaderModel.swift */,
 				19D4C7C227E3CF420094F0F6 /* DetailsModel.swift */,
 				19D4C7C627E3D19B0094F0F6 /* BulletPointModel.swift */,
@@ -189,6 +230,7 @@
 			children = (
 				19D4C7C027E3A58C0094F0F6 /* CVSubview.swift */,
 				19D4C7BA27E39FF00094F0F6 /* PersonalDataView.swift */,
+				19D4C84A27E79D6B0094F0F6 /* SummaryView.swift */,
 				19D4C7BC27E3A4980094F0F6 /* HeaderView.swift */,
 				19D4C7C427E3CF740094F0F6 /* DetailsView.swift */,
 				19D4C7C827E3D1CA0094F0F6 /* BulletPointView.swift */,
@@ -308,8 +350,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19D4C85A27E7A4F70094F0F6 /* OpenSans-Medium.ttf in Resources */,
+				19D4C86127E7A4F70094F0F6 /* OpenSans-Italic.ttf in Resources */,
 				19533DC227E26AA0004D5AE5 /* Lobster.otf in Resources */,
+				19D4C86327E7A4F70094F0F6 /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				19D4C85F27E7A4F70094F0F6 /* OpenSans-ExtraBold.ttf in Resources */,
+				19D4C85D27E7A4F70094F0F6 /* OpenSans-SemiBold.ttf in Resources */,
+				19D4C86427E7A4F70094F0F6 /* OpenSans-MediumItalic.ttf in Resources */,
+				19D4C86527E7A4F70094F0F6 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				19D4C86027E7A4F70094F0F6 /* OpenSans-LightItalic.ttf in Resources */,
+				19D4C85C27E7A4F70094F0F6 /* OpenSans-Bold.ttf in Resources */,
 				19533D9427E22BAC004D5AE5 /* LaunchScreen.storyboard in Resources */,
+				19D4C85B27E7A4F70094F0F6 /* OpenSans-Light.ttf in Resources */,
+				19D4C85E27E7A4F70094F0F6 /* OpenSans-BoldItalic.ttf in Resources */,
+				19D4C86227E7A4F70094F0F6 /* OpenSans-Regular.ttf in Resources */,
 				19533D9127E22BAC004D5AE5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +391,7 @@
 			files = (
 				19D4C7BF27E3A4FA0094F0F6 /* HeaderModel.swift in Sources */,
 				19533D8C27E22BAB004D5AE5 /* PDFViewController.swift in Sources */,
+				19D4C84B27E79D6B0094F0F6 /* SummaryView.swift in Sources */,
 				19D4C7C127E3A58C0094F0F6 /* CVSubview.swift in Sources */,
 				19D4C7C727E3D19B0094F0F6 /* BulletPointModel.swift in Sources */,
 				19D4C7C927E3D1CA0094F0F6 /* BulletPointView.swift in Sources */,
@@ -346,6 +401,7 @@
 				19D4C7C327E3CF420094F0F6 /* DetailsModel.swift in Sources */,
 				19D4C7C527E3CF740094F0F6 /* DetailsView.swift in Sources */,
 				19533D8827E22BAB004D5AE5 /* AppDelegate.swift in Sources */,
+				19D4C84D27E79DC80094F0F6 /* SummaryModel.swift in Sources */,
 				19533D8A27E22BAB004D5AE5 /* SceneDelegate.swift in Sources */,
 				19533DB927E22BF8004D5AE5 /* CVView.swift in Sources */,
 				19D4C7CB27E3D3EF0094F0F6 /* CVSubviewFactory.swift in Sources */,

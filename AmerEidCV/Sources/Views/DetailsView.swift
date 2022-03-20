@@ -10,27 +10,29 @@ import UIKit
 class DetailsView: CVSubview {
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Futura-Medium", size: 12)
+        label.font = UIFont(name: "OpenSans-Bold", size: 10)
         label.textColor = .darkGray
         return label
     }()
     
     private let subtitleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Futura", size: 12)
+        label.font = UIFont(name: "OpenSans-Italic", size: 10)
+        label.textColor = .black
         return label
     }()
     
     private let dateLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Futura-Medium", size: 12)
+        label.font = UIFont(name: "OpenSans-Bold", size: 10)
         label.textColor = .darkGray
         return label
     }()
     
     private let locationLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Futura", size: 12)
+        label.font = UIFont(name: "OpenSans-Italic", size: 10)
+        label.textColor = .black
         return label
     }()
     
@@ -55,9 +57,9 @@ class DetailsView: CVSubview {
     
     override func layout() {
         titleLabel.pin.sizeToFit().start().top()
-        subtitleLabel.pin.sizeToFit().start().below(of: titleLabel).marginTop(5)
+        subtitleLabel.pin.sizeToFit().start().below(of: titleLabel).marginTop(3)
         dateLabel.pin.sizeToFit().end().top()
-        locationLabel.pin.sizeToFit().end().below(of: dateLabel).marginTop(5)
+        locationLabel.pin.sizeToFit().end().below(of: dateLabel).marginTop(3)
         pin.wrapContent(.vertically)
     }
     
