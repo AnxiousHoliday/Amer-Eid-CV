@@ -16,9 +16,16 @@
 		19533DA927E22BAD004D5AE5 /* AmerEidCVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19533DA827E22BAD004D5AE5 /* AmerEidCVUITests.swift */; };
 		19533DAB27E22BAD004D5AE5 /* AmerEidCVUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19533DAA27E22BAD004D5AE5 /* AmerEidCVUITestsLaunchTests.swift */; };
 		19533DB927E22BF8004D5AE5 /* CVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19533DB827E22BF8004D5AE5 /* CVView.swift */; };
-		19533DBC27E24687004D5AE5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 19533DBB27E24687004D5AE5 /* SnapKit */; };
 		19533DBF27E259AE004D5AE5 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 19533DBE27E259AE004D5AE5 /* PinLayout */; };
 		19533DC227E26AA0004D5AE5 /* Lobster.otf in Resources */ = {isa = PBXBuildFile; fileRef = 19533DC127E26A80004D5AE5 /* Lobster.otf */; };
+		1987F74D27EB6BBB007DC43D /* CVLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987F74C27EB6BBB007DC43D /* CVLabel.swift */; };
+		19CDDDEC27F0817B0099E5E8 /* BulletPointLabelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDDDEB27F0817B0099E5E8 /* BulletPointLabelsModel.swift */; };
+		19CDDDEE27F0AB3C0099E5E8 /* BulletPointLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDDDED27F0AB3C0099E5E8 /* BulletPointLabelsView.swift */; };
+		19CDDDF027F0AC090099E5E8 /* LegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDDDEF27F0AC090099E5E8 /* LegendView.swift */; };
+		19CDDDF327F0B9DE0099E5E8 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDDDF227F0B9DE0099E5E8 /* UIFontExtensions.swift */; };
+		19CDDDF527F0BA0E0099E5E8 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDDDF427F0BA0E0099E5E8 /* UIColorExtensions.swift */; };
+		19CDDDF727F0BA440099E5E8 /* CVLabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDDDF627F0BA440099E5E8 /* CVLabelModel.swift */; };
+		19CDDDFA27F0BACE0099E5E8 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDDDF927F0BACE0099E5E8 /* UIViewExtensions.swift */; };
 		19D4C7B827E39E010094F0F6 /* PersonalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C7B727E39E010094F0F6 /* PersonalDataModel.swift */; };
 		19D4C7BB27E39FF00094F0F6 /* PersonalDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C7BA27E39FF00094F0F6 /* PersonalDataView.swift */; };
 		19D4C7BD27E3A4980094F0F6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C7BC27E3A4980094F0F6 /* HeaderView.swift */; };
@@ -77,6 +84,14 @@
 		19533DAA27E22BAD004D5AE5 /* AmerEidCVUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmerEidCVUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		19533DB827E22BF8004D5AE5 /* CVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVView.swift; sourceTree = "<group>"; };
 		19533DC127E26A80004D5AE5 /* Lobster.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lobster.otf; sourceTree = "<group>"; };
+		1987F74C27EB6BBB007DC43D /* CVLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVLabel.swift; sourceTree = "<group>"; };
+		19CDDDEB27F0817B0099E5E8 /* BulletPointLabelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletPointLabelsModel.swift; sourceTree = "<group>"; };
+		19CDDDED27F0AB3C0099E5E8 /* BulletPointLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletPointLabelsView.swift; sourceTree = "<group>"; };
+		19CDDDEF27F0AC090099E5E8 /* LegendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendView.swift; sourceTree = "<group>"; };
+		19CDDDF227F0B9DE0099E5E8 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
+		19CDDDF427F0BA0E0099E5E8 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		19CDDDF627F0BA440099E5E8 /* CVLabelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVLabelModel.swift; sourceTree = "<group>"; };
+		19CDDDF927F0BACE0099E5E8 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		19D4C7B727E39E010094F0F6 /* PersonalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataModel.swift; sourceTree = "<group>"; };
 		19D4C7BA27E39FF00094F0F6 /* PersonalDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataView.swift; sourceTree = "<group>"; };
 		19D4C7BC27E3A4980094F0F6 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -109,7 +124,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				19533DBF27E259AE004D5AE5 /* PinLayout in Frameworks */,
-				19533DBC27E24687004D5AE5 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +169,6 @@
 			children = (
 				19533D8727E22BAB004D5AE5 /* AppDelegate.swift */,
 				19533D8927E22BAB004D5AE5 /* SceneDelegate.swift */,
-				19533D8B27E22BAB004D5AE5 /* PDFViewController.swift */,
 				19533DB727E22BE5004D5AE5 /* Sources */,
 				19533D9027E22BAC004D5AE5 /* Assets.xcassets */,
 				19533D9227E22BAC004D5AE5 /* LaunchScreen.storyboard */,
@@ -184,10 +197,11 @@
 		19533DB727E22BE5004D5AE5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				19CDDDF827F0BA930099E5E8 /* ViewControllers */,
+				19CDDDF127F0B9D10099E5E8 /* Extensions */,
 				19D4C7B927E39FDC0094F0F6 /* Views */,
 				19D4C7B627E39DDC0094F0F6 /* Models */,
 				19533DC027E26A73004D5AE5 /* Fonts */,
-				19533DB827E22BF8004D5AE5 /* CVView.swift */,
 				19D4C7CA27E3D3EF0094F0F6 /* CVSubviewFactory.swift */,
 			);
 			path = Sources;
@@ -213,14 +227,34 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		19CDDDF127F0B9D10099E5E8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				19CDDDF227F0B9DE0099E5E8 /* UIFontExtensions.swift */,
+				19CDDDF427F0BA0E0099E5E8 /* UIColorExtensions.swift */,
+				19CDDDF927F0BACE0099E5E8 /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		19CDDDF827F0BA930099E5E8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				19533D8B27E22BAB004D5AE5 /* PDFViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		19D4C7B627E39DDC0094F0F6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				19CDDDF627F0BA440099E5E8 /* CVLabelModel.swift */,
 				19D4C7B727E39E010094F0F6 /* PersonalDataModel.swift */,
 				19D4C84C27E79DC80094F0F6 /* SummaryModel.swift */,
 				19D4C7BE27E3A4FA0094F0F6 /* HeaderModel.swift */,
 				19D4C7C227E3CF420094F0F6 /* DetailsModel.swift */,
 				19D4C7C627E3D19B0094F0F6 /* BulletPointModel.swift */,
+				19CDDDEB27F0817B0099E5E8 /* BulletPointLabelsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -228,12 +262,16 @@
 		19D4C7B927E39FDC0094F0F6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				19533DB827E22BF8004D5AE5 /* CVView.swift */,
 				19D4C7C027E3A58C0094F0F6 /* CVSubview.swift */,
+				1987F74C27EB6BBB007DC43D /* CVLabel.swift */,
 				19D4C7BA27E39FF00094F0F6 /* PersonalDataView.swift */,
 				19D4C84A27E79D6B0094F0F6 /* SummaryView.swift */,
 				19D4C7BC27E3A4980094F0F6 /* HeaderView.swift */,
 				19D4C7C427E3CF740094F0F6 /* DetailsView.swift */,
 				19D4C7C827E3D1CA0094F0F6 /* BulletPointView.swift */,
+				19CDDDED27F0AB3C0099E5E8 /* BulletPointLabelsView.swift */,
+				19CDDDEF27F0AC090099E5E8 /* LegendView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -255,7 +293,6 @@
 			);
 			name = AmerEidCV;
 			packageProductDependencies = (
-				19533DBB27E24687004D5AE5 /* SnapKit */,
 				19533DBE27E259AE004D5AE5 /* PinLayout */,
 			);
 			productName = AmerEidCV;
@@ -331,7 +368,6 @@
 			);
 			mainGroup = 19533D7B27E22BAB004D5AE5;
 			packageReferences = (
-				19533DBA27E24687004D5AE5 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				19533DBD27E259AE004D5AE5 /* XCRemoteSwiftPackageReference "PinLayout" */,
 			);
 			productRefGroup = 19533D8527E22BAB004D5AE5 /* Products */;
@@ -391,17 +427,25 @@
 			files = (
 				19D4C7BF27E3A4FA0094F0F6 /* HeaderModel.swift in Sources */,
 				19533D8C27E22BAB004D5AE5 /* PDFViewController.swift in Sources */,
+				19CDDDF327F0B9DE0099E5E8 /* UIFontExtensions.swift in Sources */,
+				1987F74D27EB6BBB007DC43D /* CVLabel.swift in Sources */,
 				19D4C84B27E79D6B0094F0F6 /* SummaryView.swift in Sources */,
 				19D4C7C127E3A58C0094F0F6 /* CVSubview.swift in Sources */,
 				19D4C7C727E3D19B0094F0F6 /* BulletPointModel.swift in Sources */,
+				19CDDDF727F0BA440099E5E8 /* CVLabelModel.swift in Sources */,
 				19D4C7C927E3D1CA0094F0F6 /* BulletPointView.swift in Sources */,
 				19D4C7BD27E3A4980094F0F6 /* HeaderView.swift in Sources */,
+				19CDDDFA27F0BACE0099E5E8 /* UIViewExtensions.swift in Sources */,
 				19D4C7BB27E39FF00094F0F6 /* PersonalDataView.swift in Sources */,
+				19CDDDEE27F0AB3C0099E5E8 /* BulletPointLabelsView.swift in Sources */,
 				19D4C7B827E39E010094F0F6 /* PersonalDataModel.swift in Sources */,
 				19D4C7C327E3CF420094F0F6 /* DetailsModel.swift in Sources */,
 				19D4C7C527E3CF740094F0F6 /* DetailsView.swift in Sources */,
+				19CDDDF027F0AC090099E5E8 /* LegendView.swift in Sources */,
 				19533D8827E22BAB004D5AE5 /* AppDelegate.swift in Sources */,
 				19D4C84D27E79DC80094F0F6 /* SummaryModel.swift in Sources */,
+				19CDDDF527F0BA0E0099E5E8 /* UIColorExtensions.swift in Sources */,
+				19CDDDEC27F0817B0099E5E8 /* BulletPointLabelsModel.swift in Sources */,
 				19533D8A27E22BAB004D5AE5 /* SceneDelegate.swift in Sources */,
 				19533DB927E22BF8004D5AE5 /* CVView.swift in Sources */,
 				19D4C7CB27E3D3EF0094F0F6 /* CVSubviewFactory.swift in Sources */,
@@ -738,14 +782,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		19533DBA27E24687004D5AE5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = exactVersion;
-				version = 5.0.1;
-			};
-		};
 		19533DBD27E259AE004D5AE5 /* XCRemoteSwiftPackageReference "PinLayout" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/layoutBox/PinLayout";
@@ -757,11 +793,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		19533DBB27E24687004D5AE5 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 19533DBA27E24687004D5AE5 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
 		19533DBE27E259AE004D5AE5 /* PinLayout */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 19533DBD27E259AE004D5AE5 /* XCRemoteSwiftPackageReference "PinLayout" */;

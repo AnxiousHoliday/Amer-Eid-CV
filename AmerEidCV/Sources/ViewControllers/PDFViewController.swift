@@ -17,11 +17,14 @@ class PDFViewController: UIViewController {
         view.addSubview(pdfView)
         pdfView.backgroundColor = .lightGray
         
-        let cv = CVView()
-//        cv.setNeedsLayout()
-//        cv.layoutIfNeeded()
+        let cvView = CVView()
         
-        
+        // Hide all labels before being drawn in the pdfview so that theyre selectable
+        let labelsArray = cvView.get(all: UILabel.self)
+        labelsArray.forEach { label in
+            label.isHidden = true
+        }
+
         let shareButton = UIButton(type: .system, primaryAction: UIAction(title: "Share", handler: { [weak self] action in
             guard let pdfData = self?.pdfView.document?.dataRepresentation() else { return }
             let vc = UIActivityViewController(activityItems: [pdfData], applicationActivities: [])
@@ -30,13 +33,13 @@ class PDFViewController: UIViewController {
         
         view.addSubview(shareButton)
         
-        shareButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-50)
-            make.centerX.equalToSuperview()
-        }
+//        shareButton.snp.makeConstraints { make in
+//            make.bottom.equalToSuperview().offset(-50)
+//            make.centerX.equalToSuperview()
+//        }
         
         shareButton.isEnabled = false
-        createPDF(from: cv)
+        createPDF(from: cvView)
         shareButton.isEnabled = true
     }
     
@@ -50,7 +53,6 @@ class PDFViewController: UIViewController {
         let outputFileURL = documentDirectory.appendingPathComponent("AmerEidCV.pdf")
         print("URL:", outputFileURL) // When running on simulator, use the given path to retrieve the PDF file
         
-        
         let pdfMetaData = [
           kCGPDFContextCreator: "Amer Eid",
           kCGPDFContextAuthor: "Amer Eid",
@@ -60,18 +62,34 @@ class PDFViewController: UIViewController {
         format.documentInfo = pdfMetaData as [String: Any]
         
         let pdfRenderer = UIGraphicsPDFRenderer(bounds: cvView.bounds, format: format)
-        
         let pdfData = pdfRenderer.pdfData { (context) in
             context.beginPage()
             cvView.layer.render(in: context.cgContext)
             
-            // all labels need their labels drawn while the layer itself can be rendered
-            for label in cvView.labelsArray {
+            // All labels need their labels drawn while the layer itself can be rendered
+            let labelsArray = cvView.get(all: UILabel.self)
+            for label in labelsArray {
                 // I have to get the frame of the labels relative to cvView in order to draw text (it ignores frame offset from superview)
                 guard let realFrame = label.superview?.convert(label.frame, to: cvView) else {
                     continue
                 }
                 label.drawText(in: realFrame)
+            }
+            
+            let urlContainersArray = cvView.get(all: CVLabel.self)
+            // Adding URL clicks where needed
+            for case let urlContainer in urlContainersArray {
+                // I have to get the frame of the labels relative to cvView in order to draw text (it ignores frame offset from superview)
+                guard let realFrame = urlContainer.superview?.convert(urlContainer.frame, to: cvView) else {
+                    continue
+                }
+                guard let url = urlContainer.url else {
+                    continue
+                }
+                // Frame needs to be recalculated because setURL uses PDF coordinate space, not the Core Graphics context coordinate space.
+                // -> the origin is in the bottom-left rather than the top-left, and the y-axis increases in an upwards direction.
+                let urlFrame = CGRect(x: realFrame.minX, y: cvView.frame.height - realFrame.minY - realFrame.height, width: realFrame.width, height: realFrame.height)
+                context.setURL(url, for: urlFrame)
             }
         }
         pdfView.document = PDFDocument(data: pdfData)
@@ -83,6 +101,4 @@ class PDFViewController: UIViewController {
             print("Could not create PDF file: \(error)")
         }
     }
-    
 }
-

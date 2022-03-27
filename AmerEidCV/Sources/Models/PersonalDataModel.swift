@@ -14,4 +14,5 @@ struct PersonalDataModel {
     let email: String
     let githubURL: URL
     let linkedInURL: URL
+    let flagImageName: String
 }

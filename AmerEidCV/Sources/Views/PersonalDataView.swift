@@ -8,27 +8,17 @@
 import UIKit
 
 class PersonalDataView: CVSubview {
-    
     private let myNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Amer Eid"
         label.textColor = .black
-        label.font = UIFont(name: "Lobster1.3", size: 45)
-        return label
-    }()
-    
-    private let jobTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Lead iOS Engineer"
-        label.textColor = UIColor.darkGray
-        label.font = UIFont(name: "Futura", size: 14)
+        label.font = UIFont(name: UIFont.fontLobster, size: 45)
         return label
     }()
     
     private let myEmailAddressLabel: UILabel = {
         let label = UILabel()
-        label.text = "amereid92@gmail.com"
-        label.font = UIFont(name: "OpenSans-Regular", size: 12)
+        label.textColor = .black
+        label.font = UIFont.h1FontRegular
         return label
     }()
     
@@ -36,14 +26,14 @@ class PersonalDataView: CVSubview {
         let label = UILabel()
         label.text = "Email"
         label.textColor = UIColor.darkGray
-        label.font = UIFont(name: "OpenSans-Bold", size: 12)
+        label.font = UIFont.h1FontBold
         return label
     }()
     
     private let myPhoneNumberLabel: UILabel = {
         let label = UILabel()
-        label.text = "+971506832163"
-        label.font = UIFont(name: "OpenSans-Regular", size: 12)
+        label.textColor = .black
+        label.font = UIFont.h1FontRegular
         return label
     }()
     
@@ -51,67 +41,58 @@ class PersonalDataView: CVSubview {
         let label = UILabel()
         label.text = "Phone"
         label.textColor = UIColor.darkGray
-        label.font = UIFont(name: "OpenSans-Bold", size: 12)
+        label.font = UIFont.h1FontBold
         return label
     }()
     
-    private let myAddressLabel: UILabel = {
+    private let myLocationLabel: UILabel = {
         let label = UILabel()
-        label.text = "Abu Dhabi, United Arab Emirates"
-        label.font = UIFont(name: "OpenSans-Regular", size: 12)
+        label.textColor = .black
+        label.font = UIFont.h1FontRegular
         return label
     }()
     
-    private let myAddressTitleLabel: UILabel = {
+    private let flagImageView = UIImageView()
+    
+    private let myLocationTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Location"
         label.textColor = UIColor.darkGray
-        label.font = UIFont(name: "OpenSans-Bold", size: 12)
+        label.font = UIFont.h1FontBold
         return label
     }()
     
-    private let myLinkedInProfileLabel: UILabel = {
-        let label = UILabel()
-        label.attributedText = "Press Me".basicLinkAppearance(link: URL(string: "https://www.linkedin.com/in/amer-eid92/")!)
-        return label
-    }()
+    private let myLinkedInProfileLabelContainer: CVLabel!
     
-    private let myLinkedInProfileTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "LinkedIn"
-        label.textColor = UIColor.darkGray
-        label.font = UIFont(name: "OpenSans-Bold", size: 12)
-        return label
-    }()
+    private let myGitHubProfileLabelContainer: CVLabel!
     
-    private let myGitHubProfileLabel: UILabel = {
-        let label = UILabel()
-        label.attributedText = "Press Me".basicLinkAppearance(link: URL(string: "https://github.com/amereid")!)
-        return label
-    }()
-    
-    private let myGitHubProfileTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "GitHub"
-        label.textColor = UIColor.darkGray
-        label.font = UIFont(name: "OpenSans-Bold", size: 12)
-        return label
-    }()
-    
-    private let lineView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .darkGray
-        return view
-    }()
-    
-    init() {
+    init(model: PersonalDataModel) {
+        myNameLabel.text = model.name
+        myEmailAddressLabel.text = model.email
+        myPhoneNumberLabel.text = model.phone
+        myLocationLabel.text = model.location
+        
+        let linkedInLabelModel = CVLabelModel(text: "LinkedIn",
+                                              font: UIFont.h1FontRegular,
+                                              textColor: UIColor.blueColor,
+                                              url: model.linkedInURL,
+                                              underlineColor: UIColor.blueColor)
+        let gitHubLabelModel = CVLabelModel(text: "GitHub",
+                                            font: UIFont.h1FontRegular,
+                                            textColor: UIColor.blueColor,
+                                            url: model.githubURL,
+                                            underlineColor: UIColor.blueColor)
+        
+        myLinkedInProfileLabelContainer = CVLabel(model: linkedInLabelModel)
+        myGitHubProfileLabelContainer = CVLabel(model: gitHubLabelModel)
+
+        flagImageView.image = UIImage(named: model.flagImageName)
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         commonInit()
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        commonInit()
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func commonInit() {
@@ -121,20 +102,16 @@ class PersonalDataView: CVSubview {
     
     override func layout() {
         myNameLabel.pin.sizeToFit().start().top()
-        jobTitleLabel.pin.sizeToFit().below(of: myNameLabel, aligned: .start)
         myPhoneNumberLabel.pin.sizeToFit().top().end()
         myPhoneNumberTitleLabel.pin.sizeToFit().before(of: myPhoneNumberLabel, aligned: .center).marginEnd(5)
         myEmailAddressLabel.pin.sizeToFit().before(of: myPhoneNumberTitleLabel, aligned: .center).marginEnd(10)
         myEmailAddressTitleLabel.pin.sizeToFit().before(of: myEmailAddressLabel, aligned: .center).marginEnd(5)
-        myAddressLabel.pin.sizeToFit().below(of: myPhoneNumberLabel).marginTop(10).end()
-        myAddressTitleLabel.pin.sizeToFit().before(of: myAddressLabel, aligned: .center).marginEnd(5)
-        myGitHubProfileLabel.pin.sizeToFit().below(of: myAddressLabel).marginTop(10).end()
-        myGitHubProfileTitleLabel.pin.sizeToFit().before(of: myGitHubProfileLabel, aligned: .center).marginEnd(5)
-        myLinkedInProfileLabel.pin.sizeToFit().before(of: myGitHubProfileTitleLabel, aligned: .center).marginEnd(10)
-        myLinkedInProfileTitleLabel.pin.sizeToFit().before(of: myLinkedInProfileLabel, aligned: .center).marginEnd(5)
-        lineView.pin.horizontally().height(1).below(of: myLinkedInProfileLabel).marginTop(10)
+        myLocationLabel.pin.sizeToFit().below(of: myPhoneNumberLabel).marginTop(10).end()
+        myLocationTitleLabel.pin.sizeToFit().before(of: myLocationLabel, aligned: .center).marginEnd(5)
+        flagImageView.pin.height(myLocationTitleLabel.frame.height).width(myLocationTitleLabel.frame.height * 1.3).before(of: myLocationTitleLabel, aligned: .center).marginEnd(5)
+        myGitHubProfileLabelContainer.pin.below(of: myLocationLabel).marginTop(10).end()
+        myLinkedInProfileLabelContainer.pin.sizeToFit().before(of: myGitHubProfileLabelContainer, aligned: .center).marginEnd(10)
         pin.wrapContent(.vertically)
-        
     }
     
     private func setupViews() {
@@ -146,16 +123,12 @@ class PersonalDataView: CVSubview {
         addSubview(myPhoneNumberLabel)
         addSubview(myPhoneNumberTitleLabel)
         
-        addSubview(myAddressLabel)
-        addSubview(myAddressTitleLabel)
+        addSubview(myLocationLabel)
+        addSubview(myLocationTitleLabel)
         
-        addSubview(myLinkedInProfileLabel)
-        addSubview(myLinkedInProfileTitleLabel)
+        addSubview(flagImageView)
         
-        addSubview(myGitHubProfileLabel)
-        addSubview(myGitHubProfileTitleLabel)
-        
-//        addSubview(jobTitleLabel)
-//        addSubview(lineView)
+        addSubview(myLinkedInProfileLabelContainer)
+        addSubview(myGitHubProfileLabelContainer)
     }
 }

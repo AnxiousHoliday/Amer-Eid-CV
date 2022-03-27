@@ -11,7 +11,7 @@ class CVSubviewFactory {
     static func getView(model: Any) -> CVSubview? {
         switch model {
         case let personaDataModel as PersonalDataModel:
-            return PersonalDataView()
+            return PersonalDataView(model: personaDataModel)
         case let headerModel as HeaderModel:
             return HeaderView(model: headerModel)
         case let detailsModel as DetailsModel:
@@ -20,6 +20,8 @@ class CVSubviewFactory {
             return BulletPointView(model: bulletPointModel)
         case let summaryModel as SummaryModel:
             return SummaryView(model: summaryModel)
+        case let bulletPointLabelsModel as BulletPointLabelsModel:
+            return BulletPointLabelsView(model: bulletPointLabelsModel)
         default:
             return nil
         }

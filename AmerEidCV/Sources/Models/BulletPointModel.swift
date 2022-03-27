@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum BulletPointStyle {
+    case normal, indented
+}
+
 struct BulletPointModel {
     let text: String
+    var style: BulletPointStyle = .normal
 }

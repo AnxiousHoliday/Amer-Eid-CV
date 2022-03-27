@@ -10,9 +10,8 @@ import UIKit
 class HeaderView: CVSubview {
     private let sectionHeaderLabel: UILabel = {
         let label = UILabel()
-        label.text = "Section Header Title"
         label.textColor = .black
-        label.font = UIFont(name: "Lobster1.3", size: 18)
+        label.font = UIFont(name: UIFont.fontLobster, size: 18)
         return label
     }()
     

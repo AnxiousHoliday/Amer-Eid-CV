@@ -12,4 +12,5 @@ struct DetailsModel {
     let subtitle: String
     let date: String
     let location: String
+    let flagImageName: String
 }
