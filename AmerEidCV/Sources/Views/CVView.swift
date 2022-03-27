@@ -31,8 +31,8 @@ public class CVView: UIView {
      SummaryModel(text: "Lead iOS developer with over 6 years of experience creating and developing complex user focused software applications. Led a team of 5 to create the # 1 music streaming app in MENA with million users. Responsible for leading the design and implementation of complex technical projects."),
      
      HeaderModel(title: "Experience"),
-     
-     DetailsModel(title: "Anghami",
+         
+     DetailsModel(titleModel: CVLabelModel(text: "Anghami", font: UIFont.p1FontBold, textColor: .blueColor, url: URL(string: "https://anghami.com")!, underlineColor: .blueColor),
                   subtitle: "Lead iOS Engineer",
                   date: "April 2020 - Present",
                   location: "Abu Dhabi, United Arab Emirates",
@@ -41,36 +41,37 @@ public class CVView: UIView {
      BulletPointModel(text: "Anghami is the leading music streaming platform within the MENA region, with over 21 million MAUs"),
      BulletPointModel(text: "Sole lead developer of the iOS platform which boasts a rating of 4.7 (900K ratings) on the App Store", style: .indented),
      BulletPointModel(text: "Managed a team of 5 people and led development on iOS, tvOS, watchOS, iPadOS, and Carplay"),
-     BulletPointModel(text: "Main architect of core features such as the custom Audio Engine (Written in C), Live Radios, Stories, Music Player, Carplay App, Apple Watch App, Chat, In-App Purchases & Subscriptions, etc"),
-     BulletPointModel(text: "Responsible for automating release and testing pipeline using Fastlane and Jenkins saving 32min/build"),
+     BulletPointModel(text: "Main architect of core features such as the custom Audio Engine, Live Radios, Stories, Music Player, Carplay App, Apple Watch App, Chat, In-App Purchases & Subscriptions, etc"),
+     BulletPointModel(text: "Responsible for automating release and testing pipelines using Fastlane and Jenkins saving 32min/build"),
      BulletPointModel(text: "Reduced app hangrate from 200ms/hour to 150ms/hour by utilizing GCD to ensure processor heavy processes such as DB (Realm) read/write transactions and others are off the main thread"),
+     BulletPointModel(text: "Reduced average memory usage from 430mb to 330mb by deep diving into memory management and eliminating all forms of memory leaks using memory graph along with other Xcode instruments and tools"),
      BulletPointModel(text: "Reduced hitch rate from 15ms/sec to 7ms/sec by laying out our dynamic homepage using PinLayout (frames) and caching already calculated dimensions to reduce layout calculation time"),
-     BulletPointModel(text: "Reduced average memory usage from 430mb to 330mb by deep diving into memory management and eliminating all forms of memory leaks using memory graph along other Xcode instruments and tools"),
      BulletPointModel(text: "Was part of the core team that led to Anghami's IPO - first ever MENA Tech IPO on NASDAQ"),
      
-     DetailsModel(title: "Anghami",
+     DetailsModel(titleModel: CVLabelModel(text: "Anghami", font: UIFont.p1FontBold, textColor: .darkGray, url: nil, underlineColor: nil),
                   subtitle: "iOS Engineer",
                   date: "June 2017 - April 2020",
                   location: "Beirut, Lebanon",
                   flagImageName: lebanonFlagImageName),
      
      BulletPointModel(text: "Responsible for driving best engineering practices within the team and performing code reviews"),
-     BulletPointModel(text: "Refactored the UI of the app for better performance and customizability using IGListKit and PinLayout, which improved rendering time and scroll performance by over 40%"),
+     BulletPointModel(text: "Improved rendering time and scroll performance by over 40% by refactoring UI using IGListKit and PinLayout"),
+     BulletPointModel(text: "Spearheaded the conversion of the Video Engine to support HLS video within a week to allow for streaming of the Game of Thrones season 8 premiere for the MENA region"),
      
-     DetailsModel(title: "Parkr (Startup)",
+     DetailsModel(titleModel: CVLabelModel(text: "Parkr", font: UIFont.p1FontBold, textColor: .blueColor, url: URL(string: "https://weareparkr.com")!, underlineColor: .blueColor),
                   subtitle: "Co-founder",
                   date: "June 2016 – June 2017",
                   location: "Beirut, Lebanon",
                   flagImageName: lebanonFlagImageName),
      
-     BulletPointModel(text: "Co-founded a parking app for emerging markets (www.weareparkr.com)"),
+     BulletPointModel(text: "Co-founded a parking startup for emerging markets"),
      BulletPointModel(text: "Pitched to investors throughout MENA and raised over 100,000 USD", style: .indented),
      BulletPointModel(text: "Conceptualized, sketched, developed, and managed the release of the app and later features"),
      BulletPointModel(text: "Underwent acceleration, programs, and workshops in Beirut and San Francisco"),
     
      HeaderModel(title: "Education"),
-    
-     DetailsModel(title: "American University Of Beirut",
+     
+     DetailsModel(titleModel: CVLabelModel(text: "American University Of Beirut", font: UIFont.p1FontBold, textColor: .darkGray, url: nil, underlineColor: nil),
                   subtitle: "Bachelor of Science, Computer Science",
                   date: "June 2016",
                   location: "Beirut, Lebanon",
@@ -172,6 +173,6 @@ public class CVView: UIView {
         let legendView = LegendView()
         addSubview(legendView)
         legendView.layout()
-        legendView.pin.bottom(80).end(pageSidePadding)
+        legendView.pin.bottom(65).end(pageSidePadding)
     }
 }

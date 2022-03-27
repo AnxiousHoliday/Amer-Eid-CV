@@ -8,12 +8,7 @@
 import UIKit
 
 class DetailsView: CVSubview {
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.p1FontBold
-        label.textColor = .darkGray
-        return label
-    }()
+    private let titleLabel: CVLabel!
     
     private let subtitleLabel: UILabel = {
         let label = UILabel()
@@ -39,7 +34,7 @@ class DetailsView: CVSubview {
     private let flagImageView = UIImageView()
     
     init(model: DetailsModel) {
-        titleLabel.text = model.title
+        titleLabel = CVLabel(model: model.titleModel)
         subtitleLabel.text = model.subtitle
         dateLabel.text = model.date
         locationLabel.text = model.location
@@ -49,8 +44,7 @@ class DetailsView: CVSubview {
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        commonInit()
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func commonInit() {
