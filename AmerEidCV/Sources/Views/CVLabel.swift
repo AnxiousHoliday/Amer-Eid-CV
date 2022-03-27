@@ -16,6 +16,7 @@ class CVLabel: UIView {
         label.font = model.font
         label.textColor = model.textColor
         label.text = model.text
+        label.textAlignment = model.textAlignment
         url = model.url
         underLineView.backgroundColor = model.underlineColor
         super.init(frame: .zero)

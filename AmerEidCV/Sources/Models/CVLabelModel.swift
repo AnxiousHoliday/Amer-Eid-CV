@@ -13,4 +13,5 @@ struct CVLabelModel {
     let textColor: UIColor
     let url: URL?
     let underlineColor: UIColor?
+    var textAlignment: NSTextAlignment = .natural
 }

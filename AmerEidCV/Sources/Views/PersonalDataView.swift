@@ -106,10 +106,10 @@ class PersonalDataView: CVSubview {
         myPhoneNumberTitleLabel.pin.sizeToFit().before(of: myPhoneNumberLabel, aligned: .center).marginEnd(5)
         myEmailAddressLabel.pin.sizeToFit().before(of: myPhoneNumberTitleLabel, aligned: .center).marginEnd(10)
         myEmailAddressTitleLabel.pin.sizeToFit().before(of: myEmailAddressLabel, aligned: .center).marginEnd(5)
-        myLocationLabel.pin.sizeToFit().below(of: myPhoneNumberLabel).marginTop(10).end()
+        myLocationLabel.pin.sizeToFit().below(of: myPhoneNumberLabel).marginTop(5).end()
         myLocationTitleLabel.pin.sizeToFit().before(of: myLocationLabel, aligned: .center).marginEnd(5)
         flagImageView.pin.height(myLocationTitleLabel.frame.height).width(myLocationTitleLabel.frame.height * 1.3).before(of: myLocationTitleLabel, aligned: .center).marginEnd(5)
-        myGitHubProfileLabelContainer.pin.below(of: myLocationLabel).marginTop(10).end()
+        myGitHubProfileLabelContainer.pin.below(of: myLocationLabel).marginTop(5).end()
         myLinkedInProfileLabelContainer.pin.sizeToFit().before(of: myGitHubProfileLabelContainer, aligned: .center).marginEnd(10)
         pin.wrapContent(.vertically)
     }

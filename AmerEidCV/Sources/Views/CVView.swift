@@ -128,6 +128,7 @@ public class CVView: UIView {
     private func commonInit() {
         setupViews()
         setupLegendView()
+        setupWaterMarkLabel()
     }
     
     private func setupViews() {
@@ -172,6 +173,17 @@ public class CVView: UIView {
         let legendView = LegendView()
         addSubview(legendView)
         legendView.layout()
-        legendView.pin.bottom(65).end(pageSidePadding)
+        legendView.pin.bottom(90).end(pageSidePadding)
+    }
+    
+    private func setupWaterMarkLabel() {
+        let waterMarkLabel = CVLabel(model: CVLabelModel(text: "I made my CV using my own iOS App Project 💻",
+                                                         font: UIFont.p1FontRegular,
+                                                         textColor: .blueColor,
+                                                         url: URL(string: "https://github.com/amereid/amereidcv"),
+                                                         underlineColor: .blueColor,
+                                                         textAlignment: .center))
+        addSubview(waterMarkLabel)
+        waterMarkLabel.pin.bottom(25).hCenter()
     }
 }
