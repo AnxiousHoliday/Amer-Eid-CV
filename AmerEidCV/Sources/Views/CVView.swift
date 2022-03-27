@@ -28,15 +28,14 @@ public class CVView: UIView {
                        linkedInURL: URL(string: "https://www.linkedin.com/in/amer-eid92/")!,
                        flagImageName: uaeFlagImageName),
      
-     SummaryModel(text: "Lead iOS developer with over 6 years of experience creating and developing complex user focused software applications. Led a team of 5 to create the # 1 music streaming app in MENA with millions of users. Responsible for leading the design and implementation of complex technical projects."),
+     SummaryModel(text: "Lead iOS developer with over 6 years of experience creating and developing complex user focused software applications. Currently leading a team of 5 to create the # 1 music streaming app in MENA with millions of users. Responsible for leading the design and implementation of complex technical projects."),
      
      HeaderModel(title: "Experience"),
          
-     DetailsModel(titleModel: CVLabelModel(text: "Anghami", font: UIFont.p1FontBold, textColor: .blueColor, url: URL(string: "https://anghami.com")!, underlineColor: .blueColor),
+     DetailsModel(titleModel: CVLabelModel(text: "Anghami", font: UIFont.p1FontBold, textColor: .blueLinkColor, url: URL(string: "https://anghami.com")!, underlineColor: .blueLinkColor),
                   subtitle: "Lead iOS Engineer",
                   date: "April 2020 - Present",
-                  location: "Abu Dhabi, United Arab Emirates",
-                  flagImageName: uaeFlagImageName),
+                  location: "Abu Dhabi, United Arab Emirates"),
      
      BulletPointModel(text: "Anghami is the leading music streaming platform within the MENA region, with over 21 million MAUs"),
      BulletPointModel(text: "Sole lead developer of the iOS platform which boasts a rating of 4.7 (900K ratings) on the App Store", style: .indented),
@@ -51,18 +50,16 @@ public class CVView: UIView {
      DetailsModel(titleModel: CVLabelModel(text: "Anghami", font: UIFont.p1FontBold, textColor: .darkGray, url: nil, underlineColor: nil),
                   subtitle: "iOS Engineer",
                   date: "June 2017 - April 2020",
-                  location: "Beirut, Lebanon",
-                  flagImageName: lebanonFlagImageName),
+                  location: "Beirut, Lebanon"),
      
      BulletPointModel(text: "Responsible for driving best engineering practices within the team and performing code reviews"),
      BulletPointModel(text: "Improved rendering time and scroll performance by over 40% by refactoring UI using IGListKit and PinLayout"),
      BulletPointModel(text: "Spearheaded the conversion of the Video Engine to support HLS video within a week to allow for streaming of the Game of Thrones season 8 premiere for the MENA region"),
      
-     DetailsModel(titleModel: CVLabelModel(text: "Parkr", font: UIFont.p1FontBold, textColor: .blueColor, url: URL(string: "https://weareparkr.com")!, underlineColor: .blueColor),
+     DetailsModel(titleModel: CVLabelModel(text: "Parkr", font: UIFont.p1FontBold, textColor: .blueLinkColor, url: URL(string: "https://weareparkr.com")!, underlineColor: .blueLinkColor),
                   subtitle: "Co-founder",
                   date: "June 2016 – June 2017",
-                  location: "Beirut, Lebanon",
-                  flagImageName: lebanonFlagImageName),
+                  location: "Beirut, Lebanon"),
      
      BulletPointModel(text: "Co-founded a parking startup for emerging markets"),
      BulletPointModel(text: "Pitched to investors throughout MENA and raised over 100,000 USD", style: .indented),
@@ -73,37 +70,36 @@ public class CVView: UIView {
      DetailsModel(titleModel: CVLabelModel(text: "American University Of Beirut", font: UIFont.p1FontBold, textColor: .darkGray, url: nil, underlineColor: nil),
                   subtitle: "Bachelor of Science, Computer Science",
                   date: "June 2016",
-                  location: "Beirut, Lebanon",
-                  flagImageName: lebanonFlagImageName),
+                  location: "Beirut, Lebanon"),
 
      HeaderModel(title: "Skills & Interests"),
     
      BulletPointLabelsModel(labelsModels:
                                 [CVLabelModel(text: "Programming Languages:", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil),
-                                 CVLabelModel(text: "Objective-C", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: UIColor.greenColor),
-                                 CVLabelModel(text: "Swift", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: UIColor.greenColor),
-                                 CVLabelModel(text: "Kotlin", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: UIColor.greenColor),
-                                 CVLabelModel(text: "C++", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: UIColor.greenColor),
-                                 CVLabelModel(text: "Python", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: UIColor.yellowColor),
-                                 CVLabelModel(text: "Java", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: UIColor.yellowColor)]),
+                                 CVLabelModel(text: "Objective-C", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil),
+                                 CVLabelModel(text: "Swift", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil),
+                                 CVLabelModel(text: "Kotlin", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil),
+                                 CVLabelModel(text: "C++", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil),
+                                 CVLabelModel(text: "Python", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil),
+                                 CVLabelModel(text: "Java", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil)]),
      
      BulletPointLabelsModel(labelsModels:
                                 [CVLabelModel(text: "Frameworks:", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil),
                                  CVLabelModel(text: "RxCocoa", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil),
-                                 CVLabelModel(text: "RxSwift", font: UIFont.p1FontRegular, textColor: UIColor.blueColor, url: URL(string: "https://github.com/ReactiveX/RxSwift"), underlineColor: UIColor.blueColor),
-                                 CVLabelModel(text: "Realm", font: UIFont.p1FontRegular, textColor: UIColor.blueColor, url: URL(string: "https://github.com/realm/realm-swift"), underlineColor: UIColor.blueColor),
-                                 CVLabelModel(text: "IGListKit", font: UIFont.p1FontRegular, textColor: UIColor.blueColor, url: URL(string: "https://github.com/Instagram/IGListKit"), underlineColor: UIColor.blueColor),
-                                 CVLabelModel(text: "PinLayout", font: UIFont.p1FontRegular, textColor: UIColor.blueColor, url: URL(string: "https://github.com/layoutBox/PinLayout"), underlineColor: UIColor.blueColor),
-                                 CVLabelModel(text: "SnapKit", font: UIFont.p1FontRegular, textColor: UIColor.blueColor, url: URL(string: "https://github.com/SnapKit/SnapKit"), underlineColor: UIColor.blueColor),
-                                 CVLabelModel(text: "Socket.IO", font: UIFont.p1FontRegular, textColor: UIColor.blueColor, url: URL(string: "https://github.com/socketio/socket.io-client-swift"), underlineColor: UIColor.blueColor),
-                                 CVLabelModel(text: "Laravel", font: UIFont.p1FontRegular, textColor: UIColor.blueColor, url: URL(string: "https://laravel.com"), underlineColor: UIColor.blueColor),
-                                 CVLabelModel(text: "Mimir", font: UIFont.p1FontRegular, textColor: UIColor.blueColor, url: URL(string: "https://github.com/amereid/Mimir"), underlineColor: UIColor.blueColor)]),
+                                 CVLabelModel(text: "RxSwift", font: UIFont.p1FontRegular, textColor: UIColor.blueLinkColor, url: URL(string: "https://github.com/ReactiveX/RxSwift"), underlineColor: UIColor.blueLinkColor),
+                                 CVLabelModel(text: "Realm", font: UIFont.p1FontRegular, textColor: UIColor.blueLinkColor, url: URL(string: "https://github.com/realm/realm-swift"), underlineColor: UIColor.blueLinkColor),
+                                 CVLabelModel(text: "IGListKit", font: UIFont.p1FontRegular, textColor: UIColor.blueLinkColor, url: URL(string: "https://github.com/Instagram/IGListKit"), underlineColor: UIColor.blueLinkColor),
+                                 CVLabelModel(text: "PinLayout", font: UIFont.p1FontRegular, textColor: UIColor.blueLinkColor, url: URL(string: "https://github.com/layoutBox/PinLayout"), underlineColor: UIColor.blueLinkColor),
+                                 CVLabelModel(text: "SnapKit", font: UIFont.p1FontRegular, textColor: UIColor.blueLinkColor, url: URL(string: "https://github.com/SnapKit/SnapKit"), underlineColor: UIColor.blueLinkColor),
+                                 CVLabelModel(text: "Socket.IO", font: UIFont.p1FontRegular, textColor: UIColor.blueLinkColor, url: URL(string: "https://github.com/socketio/socket.io-client-swift"), underlineColor: UIColor.blueLinkColor),
+                                 CVLabelModel(text: "Laravel", font: UIFont.p1FontRegular, textColor: UIColor.blueLinkColor, url: URL(string: "https://laravel.com"), underlineColor: UIColor.blueLinkColor),
+                                 CVLabelModel(text: "Mimir", font: UIFont.p1FontRegular, textColor: UIColor.blueLinkColor, url: URL(string: "https://github.com/amereid/Mimir"), underlineColor: UIColor.blueLinkColor)]),
      
      BulletPointLabelsModel(labelsModels:
                                 [CVLabelModel(text: "Languages:", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil),
-                                 CVLabelModel(text: "English", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: UIColor.greenColor),
-                                 CVLabelModel(text: "Arabic", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: UIColor.greenColor),
-                                 CVLabelModel(text: "Spanish", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: UIColor.yellowColor)]),
+                                 CVLabelModel(text: "English", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil),
+                                 CVLabelModel(text: "Arabic", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil),
+                                 CVLabelModel(text: "Spanish", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil)]),
      
      BulletPointLabelsModel(labelsModels:
                                 [CVLabelModel(text: "Interests:", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil),
@@ -127,7 +123,6 @@ public class CVView: UIView {
     
     private func commonInit() {
         setupViews()
-        setupLegendView()
         setupWaterMarkLabel()
     }
     
@@ -168,20 +163,13 @@ public class CVView: UIView {
             prevView = cvSubview
         }
     }
-    
-    private func setupLegendView() {
-        let legendView = LegendView()
-        addSubview(legendView)
-        legendView.layout()
-        legendView.pin.bottom(90).end(pageSidePadding)
-    }
-    
+
     private func setupWaterMarkLabel() {
         let waterMarkLabel = CVLabel(model: CVLabelModel(text: "I made my CV using my own iOS App Project 💻",
                                                          font: UIFont.p1FontRegular,
-                                                         textColor: .blueColor,
+                                                         textColor: .blueLinkColor,
                                                          url: URL(string: "https://github.com/amereid/amereidcv"),
-                                                         underlineColor: .blueColor,
+                                                         underlineColor: .blueLinkColor,
                                                          textAlignment: .center))
         addSubview(waterMarkLabel)
         waterMarkLabel.pin.bottom(25).hCenter()

@@ -31,14 +31,11 @@ class DetailsView: CVSubview {
         return label
     }()
     
-    private let flagImageView = UIImageView()
-    
     init(model: DetailsModel) {
         titleLabel = CVLabel(model: model.titleModel)
         subtitleLabel.text = model.subtitle
         dateLabel.text = model.date
         locationLabel.text = model.location
-        flagImageView.image = UIImage(named: model.flagImageName)
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         commonInit()
     }
@@ -57,7 +54,6 @@ class DetailsView: CVSubview {
         subtitleLabel.pin.sizeToFit().start().below(of: titleLabel).marginTop(3)
         dateLabel.pin.sizeToFit().end().top()
         locationLabel.pin.sizeToFit().end().below(of: dateLabel).marginTop(3)
-        flagImageView.pin.height(locationLabel.frame.height).width(locationLabel.frame.height * 1.3).before(of: locationLabel, aligned: .center).marginEnd(5)
         pin.wrapContent(.vertically)
     }
     
@@ -66,6 +62,5 @@ class DetailsView: CVSubview {
         addSubview(subtitleLabel)
         addSubview(dateLabel)
         addSubview(locationLabel)
-        addSubview(flagImageView)
     }
 }

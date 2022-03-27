@@ -74,14 +74,14 @@ class PersonalDataView: CVSubview {
         
         let linkedInLabelModel = CVLabelModel(text: "LinkedIn",
                                               font: UIFont.h1FontRegular,
-                                              textColor: UIColor.blueColor,
+                                              textColor: UIColor.blueLinkColor,
                                               url: model.linkedInURL,
-                                              underlineColor: UIColor.blueColor)
+                                              underlineColor: UIColor.blueLinkColor)
         let gitHubLabelModel = CVLabelModel(text: "GitHub",
                                             font: UIFont.h1FontRegular,
-                                            textColor: UIColor.blueColor,
+                                            textColor: UIColor.blueLinkColor,
                                             url: model.githubURL,
-                                            underlineColor: UIColor.blueColor)
+                                            underlineColor: UIColor.blueLinkColor)
         
         myLinkedInProfileLabelContainer = CVLabel(model: linkedInLabelModel)
         myGitHubProfileLabelContainer = CVLabel(model: gitHubLabelModel)
