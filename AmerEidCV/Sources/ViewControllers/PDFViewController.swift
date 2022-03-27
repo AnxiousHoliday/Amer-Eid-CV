@@ -9,13 +9,16 @@ import UIKit
 import PDFKit
 
 class PDFViewController: UIViewController {
-    private let pdfView = PDFView()
+    private let pdfView: PDFView = {
+        let view = PDFView()
+        view.backgroundColor = .lightGray
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         view.addSubview(pdfView)
-        pdfView.backgroundColor = .lightGray
         
         let cvView = CVView()
         
@@ -24,8 +27,23 @@ class PDFViewController: UIViewController {
         labelsArray.forEach { label in
             label.isHidden = true
         }
-
-        let shareButton = UIButton(type: .system, primaryAction: UIAction(title: "Share", handler: { [weak self] action in
+        
+        setupShareButton()
+        layout()
+        createPDF(from: cvView)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        layout()
+    }
+    
+    private func layout() {
+        pdfView.frame = view.bounds
+    }
+    
+    private func setupShareButton() {
+        let shareButton = UIButton(type: .system, primaryAction: UIAction(title: "Share CV", handler: { [weak self] action in
             guard let pdfData = self?.pdfView.document?.dataRepresentation() else { return }
             let vc = UIActivityViewController(activityItems: [pdfData], applicationActivities: [])
             self?.present(vc, animated: true, completion: nil)
@@ -33,19 +51,11 @@ class PDFViewController: UIViewController {
         
         view.addSubview(shareButton)
         
-//        shareButton.snp.makeConstraints { make in
-//            make.bottom.equalToSuperview().offset(-50)
-//            make.centerX.equalToSuperview()
-//        }
-        
-        shareButton.isEnabled = false
-        createPDF(from: cvView)
-        shareButton.isEnabled = true
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        pdfView.frame = view.bounds
+        shareButton.translatesAutoresizingMaskIntoConstraints = false
+        shareButton.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        shareButton.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        shareButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        shareButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
     }
     
     func createPDF(from cvView: CVView) {
