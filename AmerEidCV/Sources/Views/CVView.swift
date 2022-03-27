@@ -28,7 +28,7 @@ public class CVView: UIView {
                        linkedInURL: URL(string: "https://www.linkedin.com/in/amer-eid92/")!,
                        flagImageName: uaeFlagImageName),
      
-     SummaryModel(text: "Lead iOS developer with over 6 years of experience creating and developing complex user focused software applications. Led a team of 5 to create the # 1 music streaming app in MENA with million users. Responsible for leading the design and implementation of complex technical projects."),
+     SummaryModel(text: "Lead iOS developer with over 6 years of experience creating and developing complex user focused software applications. Led a team of 5 to create the # 1 music streaming app in MENA with millions of users. Responsible for leading the design and implementation of complex technical projects."),
      
      HeaderModel(title: "Experience"),
          
@@ -43,7 +43,7 @@ public class CVView: UIView {
      BulletPointModel(text: "Managed a team of 5 people and led development on iOS, tvOS, watchOS, iPadOS, and Carplay"),
      BulletPointModel(text: "Main architect of core features such as the custom Audio Engine, Live Radios, Stories, Music Player, Carplay App, Apple Watch App, Chat, In-App Purchases & Subscriptions, etc"),
      BulletPointModel(text: "Responsible for automating release and testing pipelines using Fastlane and Jenkins saving 32min/build"),
-     BulletPointModel(text: "Reduced app hangrate from 200ms/hour to 150ms/hour by utilizing GCD to ensure processor heavy processes such as DB (Realm) read/write transactions and others are off the main thread"),
+     BulletPointModel(text: "Reduced app hang rate from 200ms/hour to 150ms/hour by utilizing GCD to ensure processor heavy processes such as DB (Realm) read/write transactions and others are off the main thread"),
      BulletPointModel(text: "Reduced average memory usage from 430mb to 330mb by deep diving into memory management and eliminating all forms of memory leaks using memory graph along with other Xcode instruments and tools"),
      BulletPointModel(text: "Reduced hitch rate from 15ms/sec to 7ms/sec by laying out our dynamic homepage using PinLayout (frames) and caching already calculated dimensions to reduce layout calculation time"),
      BulletPointModel(text: "Was part of the core team that led to Anghami's IPO - first ever MENA Tech IPO on NASDAQ"),
@@ -66,7 +66,6 @@ public class CVView: UIView {
      
      BulletPointModel(text: "Co-founded a parking startup for emerging markets"),
      BulletPointModel(text: "Pitched to investors throughout MENA and raised over 100,000 USD", style: .indented),
-     BulletPointModel(text: "Conceptualized, sketched, developed, and managed the release of the app and later features"),
      BulletPointModel(text: "Underwent acceleration, programs, and workshops in Beirut and San Francisco"),
     
      HeaderModel(title: "Education"),
@@ -80,7 +79,7 @@ public class CVView: UIView {
      HeaderModel(title: "Skills & Interests"),
     
      BulletPointLabelsModel(labelsModels:
-                                [CVLabelModel(text: "Programing Languages:", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil),
+                                [CVLabelModel(text: "Programming Languages:", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: nil),
                                  CVLabelModel(text: "Objective-C", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: UIColor.greenColor),
                                  CVLabelModel(text: "Swift", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: UIColor.greenColor),
                                  CVLabelModel(text: "Kotlin", font: UIFont.p1FontRegular, textColor: .black, url: nil, underlineColor: UIColor.greenColor),
