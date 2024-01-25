@@ -62,9 +62,9 @@ class PersonalDataView: CVSubview {
         return label
     }()
     
-    private let myLinkedInProfileLabelContainer: CVLabel!
+    private let myLinkedInProfileLabel: CVMarkupLabel
     
-    private let myGitHubProfileLabelContainer: CVLabel!
+    private let myGitHubProfileLabel: CVMarkupLabel
     
     init(model: PersonalDataModel) {
         myNameLabel.text = model.name
@@ -72,19 +72,8 @@ class PersonalDataView: CVSubview {
         myPhoneNumberLabel.text = model.phone
         myLocationLabel.text = model.location
         
-        let linkedInLabelModel = CVLabelModel(text: "LinkedIn",
-                                              font: UIFont.h1FontRegular,
-                                              textColor: UIColor.blueLinkColor,
-                                              url: model.linkedInURL,
-                                              underlineColor: UIColor.blueLinkColor)
-        let gitHubLabelModel = CVLabelModel(text: "GitHub",
-                                            font: UIFont.h1FontRegular,
-                                            textColor: UIColor.blueLinkColor,
-                                            url: model.githubURL,
-                                            underlineColor: UIColor.blueLinkColor)
-        
-        myLinkedInProfileLabelContainer = CVLabel(model: linkedInLabelModel)
-        myGitHubProfileLabelContainer = CVLabel(model: gitHubLabelModel)
+        myLinkedInProfileLabel = CVMarkupLabel(model: model.linkedInMarkupText)
+        myGitHubProfileLabel = CVMarkupLabel(model: model.githubMarkupText)
 
         flagImageView.image = UIImage(named: model.flagImageName)
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
@@ -109,8 +98,10 @@ class PersonalDataView: CVSubview {
         myLocationLabel.pin.sizeToFit().below(of: myPhoneNumberLabel).marginTop(5).end()
         myLocationTitleLabel.pin.sizeToFit().before(of: myLocationLabel, aligned: .center).marginEnd(5)
         flagImageView.pin.height(myLocationTitleLabel.frame.height).width(myLocationTitleLabel.frame.height * 1.3).before(of: myLocationTitleLabel, aligned: .center).marginEnd(5)
-        myGitHubProfileLabelContainer.pin.below(of: myLocationLabel).marginTop(5).end()
-        myLinkedInProfileLabelContainer.pin.sizeToFit().before(of: myGitHubProfileLabelContainer, aligned: .center).marginEnd(10)
+        myGitHubProfileLabel.label.pin.sizeToFit()
+        myGitHubProfileLabel.pin.wrapContent().below(of: myLocationLabel).marginTop(5).end()
+        myLinkedInProfileLabel.label.pin.sizeToFit()
+        myLinkedInProfileLabel.pin.wrapContent().before(of: myGitHubProfileLabel, aligned: .center).marginEnd(10)
         pin.wrapContent(.vertically)
     }
     
@@ -128,7 +119,7 @@ class PersonalDataView: CVSubview {
         
         addSubview(flagImageView)
         
-        addSubview(myLinkedInProfileLabelContainer)
-        addSubview(myGitHubProfileLabelContainer)
+        addSubview(myLinkedInProfileLabel)
+        addSubview(myGitHubProfileLabel)
     }
 }

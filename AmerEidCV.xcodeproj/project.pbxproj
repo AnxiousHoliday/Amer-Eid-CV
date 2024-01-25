@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192E9D192B615F8E007EF7CE /* SpacingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E9D182B615F8E007EF7CE /* SpacingModel.swift */; };
+		192E9D1B2B616042007EF7CE /* SpacingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E9D1A2B616042007EF7CE /* SpacingView.swift */; };
+		192E9D1F2B6165A6007EF7CE /* CVSuperPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E9D1E2B6165A6007EF7CE /* CVSuperPage.swift */; };
+		192E9D232B616A30007EF7CE /* FlagImageNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E9D222B616A30007EF7CE /* FlagImageNames.swift */; };
+		192E9D252B616AB4007EF7CE /* PDFSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E9D242B616AB4007EF7CE /* PDFSizes.swift */; };
+		192E9D272B61D481007EF7CE /* CVMarkup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E9D262B61D481007EF7CE /* CVMarkup.swift */; };
+		192E9D292B62A5D8007EF7CE /* CVMarkupLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E9D282B62A5D8007EF7CE /* CVMarkupLabel.swift */; };
+		192E9D2B2B62B29E007EF7CE /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E9D2A2B62B29E007EF7CE /* UILabelExtensions.swift */; };
+		192E9D2D2B62B2CD007EF7CE /* PDFRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E9D2C2B62B2CD007EF7CE /* PDFRenderer.swift */; };
+		192E9D2F2B62B55D007EF7CE /* CVMarkupLabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E9D2E2B62B55D007EF7CE /* CVMarkupLabelModel.swift */; };
 		19533D8827E22BAB004D5AE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19533D8727E22BAB004D5AE5 /* AppDelegate.swift */; };
 		19533D8A27E22BAB004D5AE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19533D8927E22BAB004D5AE5 /* SceneDelegate.swift */; };
 		19533D8C27E22BAB004D5AE5 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19533D8B27E22BAB004D5AE5 /* PDFViewController.swift */; };
@@ -15,15 +25,11 @@
 		19533D9F27E22BAD004D5AE5 /* AmerEidCVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19533D9E27E22BAD004D5AE5 /* AmerEidCVTests.swift */; };
 		19533DA927E22BAD004D5AE5 /* AmerEidCVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19533DA827E22BAD004D5AE5 /* AmerEidCVUITests.swift */; };
 		19533DAB27E22BAD004D5AE5 /* AmerEidCVUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19533DAA27E22BAD004D5AE5 /* AmerEidCVUITestsLaunchTests.swift */; };
-		19533DB927E22BF8004D5AE5 /* CVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19533DB827E22BF8004D5AE5 /* CVView.swift */; };
+		19533DB927E22BF8004D5AE5 /* CVPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19533DB827E22BF8004D5AE5 /* CVPage1.swift */; };
 		19533DBF27E259AE004D5AE5 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 19533DBE27E259AE004D5AE5 /* PinLayout */; };
 		19533DC227E26AA0004D5AE5 /* Lobster.otf in Resources */ = {isa = PBXBuildFile; fileRef = 19533DC127E26A80004D5AE5 /* Lobster.otf */; };
-		1987F74D27EB6BBB007DC43D /* CVLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987F74C27EB6BBB007DC43D /* CVLabel.swift */; };
-		19CDDDEC27F0817B0099E5E8 /* BulletPointLabelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDDDEB27F0817B0099E5E8 /* BulletPointLabelsModel.swift */; };
-		19CDDDEE27F0AB3C0099E5E8 /* BulletPointLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDDDED27F0AB3C0099E5E8 /* BulletPointLabelsView.swift */; };
 		19CDDDF327F0B9DE0099E5E8 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDDDF227F0B9DE0099E5E8 /* UIFontExtensions.swift */; };
 		19CDDDF527F0BA0E0099E5E8 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDDDF427F0BA0E0099E5E8 /* UIColorExtensions.swift */; };
-		19CDDDF727F0BA440099E5E8 /* CVLabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDDDF627F0BA440099E5E8 /* CVLabelModel.swift */; };
 		19CDDDFA27F0BACE0099E5E8 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDDDF927F0BACE0099E5E8 /* UIViewExtensions.swift */; };
 		19D4C7B827E39E010094F0F6 /* PersonalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C7B727E39E010094F0F6 /* PersonalDataModel.swift */; };
 		19D4C7BB27E39FF00094F0F6 /* PersonalDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C7BA27E39FF00094F0F6 /* PersonalDataView.swift */; };
@@ -69,6 +75,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		192E9D182B615F8E007EF7CE /* SpacingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingModel.swift; sourceTree = "<group>"; };
+		192E9D1A2B616042007EF7CE /* SpacingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingView.swift; sourceTree = "<group>"; };
+		192E9D1E2B6165A6007EF7CE /* CVSuperPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSuperPage.swift; sourceTree = "<group>"; };
+		192E9D222B616A30007EF7CE /* FlagImageNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagImageNames.swift; sourceTree = "<group>"; };
+		192E9D242B616AB4007EF7CE /* PDFSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFSizes.swift; sourceTree = "<group>"; };
+		192E9D262B61D481007EF7CE /* CVMarkup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVMarkup.swift; sourceTree = "<group>"; };
+		192E9D282B62A5D8007EF7CE /* CVMarkupLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVMarkupLabel.swift; sourceTree = "<group>"; };
+		192E9D2A2B62B29E007EF7CE /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
+		192E9D2C2B62B2CD007EF7CE /* PDFRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFRenderer.swift; sourceTree = "<group>"; };
+		192E9D2E2B62B55D007EF7CE /* CVMarkupLabelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVMarkupLabelModel.swift; sourceTree = "<group>"; };
 		19533D8427E22BAB004D5AE5 /* AmerEidCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmerEidCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19533D8727E22BAB004D5AE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19533D8927E22BAB004D5AE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,14 +97,10 @@
 		19533DA427E22BAD004D5AE5 /* AmerEidCVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmerEidCVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19533DA827E22BAD004D5AE5 /* AmerEidCVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmerEidCVUITests.swift; sourceTree = "<group>"; };
 		19533DAA27E22BAD004D5AE5 /* AmerEidCVUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmerEidCVUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		19533DB827E22BF8004D5AE5 /* CVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVView.swift; sourceTree = "<group>"; };
+		19533DB827E22BF8004D5AE5 /* CVPage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPage1.swift; sourceTree = "<group>"; };
 		19533DC127E26A80004D5AE5 /* Lobster.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lobster.otf; sourceTree = "<group>"; };
-		1987F74C27EB6BBB007DC43D /* CVLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVLabel.swift; sourceTree = "<group>"; };
-		19CDDDEB27F0817B0099E5E8 /* BulletPointLabelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletPointLabelsModel.swift; sourceTree = "<group>"; };
-		19CDDDED27F0AB3C0099E5E8 /* BulletPointLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletPointLabelsView.swift; sourceTree = "<group>"; };
 		19CDDDF227F0B9DE0099E5E8 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		19CDDDF427F0BA0E0099E5E8 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
-		19CDDDF627F0BA440099E5E8 /* CVLabelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVLabelModel.swift; sourceTree = "<group>"; };
 		19CDDDF927F0BACE0099E5E8 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		19D4C7B727E39E010094F0F6 /* PersonalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataModel.swift; sourceTree = "<group>"; };
 		19D4C7BA27E39FF00094F0F6 /* PersonalDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataView.swift; sourceTree = "<group>"; };
@@ -142,6 +154,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		192E9D212B616A1E007EF7CE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				192E9D222B616A30007EF7CE /* FlagImageNames.swift */,
+				192E9D242B616AB4007EF7CE /* PDFSizes.swift */,
+				192E9D262B61D481007EF7CE /* CVMarkup.swift */,
+				192E9D2C2B62B2CD007EF7CE /* PDFRenderer.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		19533D7B27E22BAB004D5AE5 = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +218,7 @@
 		19533DB727E22BE5004D5AE5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				192E9D212B616A1E007EF7CE /* Helpers */,
 				19CDDDF827F0BA930099E5E8 /* ViewControllers */,
 				19CDDDF127F0B9D10099E5E8 /* Extensions */,
 				19D4C7B927E39FDC0094F0F6 /* Views */,
@@ -231,6 +255,7 @@
 				19CDDDF227F0B9DE0099E5E8 /* UIFontExtensions.swift */,
 				19CDDDF427F0BA0E0099E5E8 /* UIColorExtensions.swift */,
 				19CDDDF927F0BACE0099E5E8 /* UIViewExtensions.swift */,
+				192E9D2A2B62B29E007EF7CE /* UILabelExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -246,13 +271,13 @@
 		19D4C7B627E39DDC0094F0F6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				19CDDDF627F0BA440099E5E8 /* CVLabelModel.swift */,
 				19D4C7B727E39E010094F0F6 /* PersonalDataModel.swift */,
 				19D4C84C27E79DC80094F0F6 /* SummaryModel.swift */,
 				19D4C7BE27E3A4FA0094F0F6 /* HeaderModel.swift */,
 				19D4C7C227E3CF420094F0F6 /* DetailsModel.swift */,
 				19D4C7C627E3D19B0094F0F6 /* BulletPointModel.swift */,
-				19CDDDEB27F0817B0099E5E8 /* BulletPointLabelsModel.swift */,
+				192E9D182B615F8E007EF7CE /* SpacingModel.swift */,
+				192E9D2E2B62B55D007EF7CE /* CVMarkupLabelModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,15 +285,16 @@
 		19D4C7B927E39FDC0094F0F6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				19533DB827E22BF8004D5AE5 /* CVView.swift */,
+				19533DB827E22BF8004D5AE5 /* CVPage1.swift */,
+				192E9D1E2B6165A6007EF7CE /* CVSuperPage.swift */,
 				19D4C7C027E3A58C0094F0F6 /* CVSubview.swift */,
-				1987F74C27EB6BBB007DC43D /* CVLabel.swift */,
 				19D4C7BA27E39FF00094F0F6 /* PersonalDataView.swift */,
 				19D4C84A27E79D6B0094F0F6 /* SummaryView.swift */,
 				19D4C7BC27E3A4980094F0F6 /* HeaderView.swift */,
 				19D4C7C427E3CF740094F0F6 /* DetailsView.swift */,
 				19D4C7C827E3D1CA0094F0F6 /* BulletPointView.swift */,
-				19CDDDED27F0AB3C0099E5E8 /* BulletPointLabelsView.swift */,
+				192E9D1A2B616042007EF7CE /* SpacingView.swift */,
+				192E9D282B62A5D8007EF7CE /* CVMarkupLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,7 +366,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1330;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					19533D8327E22BAB004D5AE5 = {
 						CreatedOnToolsVersion = 13.3;
@@ -422,28 +448,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192E9D232B616A30007EF7CE /* FlagImageNames.swift in Sources */,
+				192E9D2D2B62B2CD007EF7CE /* PDFRenderer.swift in Sources */,
 				19D4C7BF27E3A4FA0094F0F6 /* HeaderModel.swift in Sources */,
 				19533D8C27E22BAB004D5AE5 /* PDFViewController.swift in Sources */,
 				19CDDDF327F0B9DE0099E5E8 /* UIFontExtensions.swift in Sources */,
-				1987F74D27EB6BBB007DC43D /* CVLabel.swift in Sources */,
+				192E9D272B61D481007EF7CE /* CVMarkup.swift in Sources */,
 				19D4C84B27E79D6B0094F0F6 /* SummaryView.swift in Sources */,
 				19D4C7C127E3A58C0094F0F6 /* CVSubview.swift in Sources */,
+				192E9D2F2B62B55D007EF7CE /* CVMarkupLabelModel.swift in Sources */,
 				19D4C7C727E3D19B0094F0F6 /* BulletPointModel.swift in Sources */,
-				19CDDDF727F0BA440099E5E8 /* CVLabelModel.swift in Sources */,
+				192E9D192B615F8E007EF7CE /* SpacingModel.swift in Sources */,
+				192E9D1F2B6165A6007EF7CE /* CVSuperPage.swift in Sources */,
 				19D4C7C927E3D1CA0094F0F6 /* BulletPointView.swift in Sources */,
 				19D4C7BD27E3A4980094F0F6 /* HeaderView.swift in Sources */,
 				19CDDDFA27F0BACE0099E5E8 /* UIViewExtensions.swift in Sources */,
 				19D4C7BB27E39FF00094F0F6 /* PersonalDataView.swift in Sources */,
-				19CDDDEE27F0AB3C0099E5E8 /* BulletPointLabelsView.swift in Sources */,
+				192E9D2B2B62B29E007EF7CE /* UILabelExtensions.swift in Sources */,
+				192E9D252B616AB4007EF7CE /* PDFSizes.swift in Sources */,
+				192E9D292B62A5D8007EF7CE /* CVMarkupLabel.swift in Sources */,
 				19D4C7B827E39E010094F0F6 /* PersonalDataModel.swift in Sources */,
 				19D4C7C327E3CF420094F0F6 /* DetailsModel.swift in Sources */,
 				19D4C7C527E3CF740094F0F6 /* DetailsView.swift in Sources */,
 				19533D8827E22BAB004D5AE5 /* AppDelegate.swift in Sources */,
 				19D4C84D27E79DC80094F0F6 /* SummaryModel.swift in Sources */,
 				19CDDDF527F0BA0E0099E5E8 /* UIColorExtensions.swift in Sources */,
-				19CDDDEC27F0817B0099E5E8 /* BulletPointLabelsModel.swift in Sources */,
+				192E9D1B2B616042007EF7CE /* SpacingView.swift in Sources */,
 				19533D8A27E22BAB004D5AE5 /* SceneDelegate.swift in Sources */,
-				19533DB927E22BF8004D5AE5 /* CVView.swift in Sources */,
+				19533DB927E22BF8004D5AE5 /* CVPage1.swift in Sources */,
 				19D4C7CB27E3D3EF0094F0F6 /* CVSubviewFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -528,6 +561,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -556,6 +590,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -588,6 +623,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

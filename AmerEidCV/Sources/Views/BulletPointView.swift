@@ -8,15 +8,8 @@
 import UIKit
 
 class BulletPointView: CVSubview {
-    var style: BulletPointStyle = .normal
-    
-    private let bulletPointLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.textColor = .black
-        label.font = UIFont.p1FontRegular
-        return label
-    }()
+    private let style: BulletPointStyle
+    let markupLabelContainer: CVMarkupLabel
     
     private let bulletPointIcon: UIView = {
         let side: CGFloat = 5
@@ -27,7 +20,7 @@ class BulletPointView: CVSubview {
     
     init(model: BulletPointModel) {
         style = model.style
-        bulletPointLabel.text = model.text
+        markupLabelContainer = CVMarkupLabel(model: CVMarkupLabelModel(text: model.text))
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         if style == .normal {
             bulletPointIcon.backgroundColor = .black
@@ -39,10 +32,9 @@ class BulletPointView: CVSubview {
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        commonInit()
+        fatalError("init(coder:) has not been implemented")
     }
-    
+      
     private func commonInit() {
         setupViews()
         layout()
@@ -51,13 +43,14 @@ class BulletPointView: CVSubview {
     override func layout() {
         let bulletPointStart: CGFloat = style == .indented ? 25 : 5
         bulletPointIcon.pin.start(bulletPointStart).top(5)
-        bulletPointLabel.pin.after(of: bulletPointIcon).marginStart(10).top().end(10).sizeToFit(.width)
-        bulletPointLabel.pin.after(of: bulletPointIcon).marginStart(10).top().end(10)
+        markupLabelContainer.pin.after(of: bulletPointIcon).marginStart(10).top().end(10)
+        markupLabelContainer.label.pin.top().horizontally().sizeToFit(.width)
+        markupLabelContainer.pin.wrapContent(.vertically).after(of: bulletPointIcon).marginStart(10).top().end(10)
         pin.wrapContent(.vertically)
     }
     
     private func setupViews() {
         addSubview(bulletPointIcon)
-        addSubview(bulletPointLabel)
+        addSubview(markupLabelContainer)
     }
 }

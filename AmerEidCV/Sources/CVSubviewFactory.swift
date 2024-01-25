@@ -5,7 +5,7 @@
 //  Created by Amer on 3/18/22.
 //
 
-import Foundation
+import UIKit
 
 class CVSubviewFactory {
     static func getView(model: Any) -> CVSubview? {
@@ -20,8 +20,8 @@ class CVSubviewFactory {
             return BulletPointView(model: bulletPointModel)
         case let summaryModel as SummaryModel:
             return SummaryView(model: summaryModel)
-        case let bulletPointLabelsModel as BulletPointLabelsModel:
-            return BulletPointLabelsView(model: bulletPointLabelsModel)
+        case let spacingModel as SpacingModel:
+            return SpacingView(model: spacingModel)
         default:
             return nil
         }

@@ -8,7 +8,7 @@
 import Foundation
 
 struct DetailsModel {
-    let titleModel: CVLabelModel
+    let titleModel: CVMarkupLabelModel
     let subtitle: String
     let date: String
     let location: String

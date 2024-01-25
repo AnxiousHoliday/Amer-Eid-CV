@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailsView: CVSubview {
-    private let titleLabel: CVLabel!
+    private let titleLabel: CVMarkupLabel
     
     private let subtitleLabel: UILabel = {
         let label = UILabel()
@@ -32,7 +32,7 @@ class DetailsView: CVSubview {
     }()
     
     init(model: DetailsModel) {
-        titleLabel = CVLabel(model: model.titleModel)
+        titleLabel = CVMarkupLabel(model: model.titleModel)
         subtitleLabel.text = model.subtitle
         dateLabel.text = model.date
         locationLabel.text = model.location
@@ -50,7 +50,8 @@ class DetailsView: CVSubview {
     }
     
     override func layout() {
-        titleLabel.pin.sizeToFit().start().top()
+        titleLabel.label.pin.sizeToFit().top().start()
+        titleLabel.pin.wrapContent().start().top()
         subtitleLabel.pin.sizeToFit().start().below(of: titleLabel).marginTop(3)
         dateLabel.pin.sizeToFit().end().top()
         locationLabel.pin.sizeToFit().end().below(of: dateLabel).marginTop(3)

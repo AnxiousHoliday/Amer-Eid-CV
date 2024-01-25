@@ -12,7 +12,7 @@ struct PersonalDataModel {
     let phone: String
     let location: String
     let email: String
-    let githubURL: URL
-    let linkedInURL: URL
+    let githubMarkupText: CVMarkupLabelModel
+    let linkedInMarkupText: CVMarkupLabelModel
     let flagImageName: String
 }

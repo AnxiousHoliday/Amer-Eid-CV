@@ -13,5 +13,10 @@ enum BulletPointStyle {
 
 struct BulletPointModel {
     let text: String
-    var style: BulletPointStyle = .normal
+    let style: BulletPointStyle
+    
+    init(text: String, style: BulletPointStyle = .normal) {
+        self.text = text
+        self.style = style
+    }
 }

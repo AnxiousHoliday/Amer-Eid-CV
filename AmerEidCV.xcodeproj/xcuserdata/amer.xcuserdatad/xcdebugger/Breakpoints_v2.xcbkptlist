@@ -78,8 +78,8 @@
             filePath = "AmerEidCV/Sources/Views/PersonalDataView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "layout()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,9 +94,71 @@
             filePath = "AmerEidCV/Sources/Views/CVView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
-            landmarkName = "setupWaterMarkLabel()"
+            startingLineNumber = "191"
+            endingLineNumber = "191">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0EBB3FE0-CC1A-4293-B4C5-7EF4406814ED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmerEidCV/Sources/Helpers/CVMarkup.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "parse(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0EBB3FE0-CC1A-4293-B4C5-7EF4406814ED - 49821600ec75703e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static AmerEidCV.CVMarkup.parse(Swift.String) -&gt; (Swift.Array&lt;(linkTextRange: Swift.Range&lt;Swift.String.Index&gt;, linkURL: Swift.String, linkText: Swift.String)&gt;, Swift.String)"
+                  moduleName = "AmerEidCV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amer/Desktop/AmerEidCV%20Xcode%20Project/AmerEidCV/Sources/Helpers/CVMarkup.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "6148">
+               </Location>
+               <Location
+                  uuid = "0EBB3FE0-CC1A-4293-B4C5-7EF4406814ED - 49821600ec75703e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static AmerEidCV.CVMarkup.parse(Swift.String) -&gt; (Swift.Array&lt;(linkTextRange: Swift.Range&lt;Swift.String.Index&gt;, linkURL: Swift.String, linkText: Swift.String)&gt;, Swift.String)"
+                  moduleName = "AmerEidCV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amer/Desktop/AmerEidCV%20Xcode%20Project/AmerEidCV/Sources/Helpers/CVMarkup.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "5848">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AADED8F7-D26A-4B9F-8F8D-3F251D78096D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmerEidCV/Sources/Views/BulletPointView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "layout()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
