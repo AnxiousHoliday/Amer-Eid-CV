@@ -21,7 +21,7 @@ public class CVPage1: CVSuperPage {
         ),
         
         SummaryModel(text:
-                        "Senior Software Engineer at Google with over 8 years of experience creating and developing complex user focused software applications. Previously led a team of 5 to create the # 1 music streaming app in MENA with millions of users. Entrepreneurially trained with a passion for creating things that make people happy."
+                        "Senior Software Engineer at Google with over 8 years of experience creating and developing complex user focused software applications. Previously led a team of 5 at Anghami to create the # 1 music streaming app in MENA with millions of users. Entrepreneurially trained with a passion for creating things that make people happy."
                     ),
         
         HeaderModel(title: "Experience"),
@@ -30,14 +30,12 @@ public class CVPage1: CVSuperPage {
                      subtitle: "Senior Software Engineer (iOS)",
                      date: "March 2023 - Present",
                      location: "Bucharest, Romania"),
-        BulletPointModel(text: "Core member of the [Fitbit](https://www.fitbit.com/global/us/home) engineering team"),
-        BulletPointModel(text: "Fitbit is the leading provider of cutting-edge wearable fitness tech and was acquired by Google in 2021", style: .indented),
-        BulletPointModel(text: "Worked as part of multiple teams such as the `Sleep`, `Mental Health`, and `Activity` teams", style: .indented),
-        BulletPointModel(text: "Refactored the Fitbit homescreen which reduced hitch rates by 34% and render time by over 45%"),
-        BulletPointModel(text: "Managed a team focused on integrating and implementing analytic events across the entire Fitbit iOS app"),
-        BulletPointModel(text: "Achieved Google's code coverage requirement of over 90% for the `Sleep`, `Stress`, and `Activity` features"),
-        BulletPointModel(text: "Was the go to person for the legacy Objective-C codebase and managed to reduce legacy CoreData related crashes by 32% and implemented a data layer API that was used by over 8 feature teams"),
-        BulletPointModel(text: "Led the architecture design and development of the `Sleep`, `Stress`, and `Activity` features for Google's\n[new Fitbit redesign](https://blog.google/products/fitbit/fitbit-app-redesign/)"),
+        BulletPointModel(text: "Core member of the [Fitbit](https://www.fitbit.com/global/us/home) Sleep and Mental Health engineering teams"),
+        BulletPointModel(text: "Refactored the Fitbit homescreen, cutting hitch rates by 34% and render time by over 45%. Achieved through SwiftUI component optimization, background queue utilization for non-UI code, and strategic data caching"),
+        BulletPointModel(text: "Led a team dedicated to integrating and implementing analytic events throughout the entire Fitbit iOS app, collaborating with diverse stakeholders from Product, Legal, Clinical Data, and Engineering teams"),
+        BulletPointModel(text: "Served as the primary resource for the legacy Objective-C codebase, successfully mitigating CoreData-related crashes by 32% through the implementation of thread-safe mechanisms"),
+        BulletPointModel(text: "Designed and implemented a robust data layer API that addressed thread safety and performance issues that existed in the legacy Objective-C codebase and was adopted by eight feature teams"),
+        BulletPointModel(text: "Led the architecture design and development of the Sleep, Stress, and Activity features, successfully meeting Google's code coverage requirement of over 90% for the [new Fitbit redesign](https://blog.google/products/fitbit/fitbit-app-redesign/)"),
         
         DetailsModel(titleModel: CVMarkupLabelModel(text: "[Anghami](https://anghami.com/about)", font: UIFont.p1FontBold),
                      subtitle: "Lead iOS Engineer",
