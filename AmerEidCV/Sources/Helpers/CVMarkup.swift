@@ -72,14 +72,19 @@ struct CVMarkup {
         for markupLinkRange in markupLinkRanges.reversed() {
             let linkURL = markupString[markupString.index(after: markupLinkRange.startIndexParenthesis)...markupString.index(before: markupLinkRange.endIndexParenthesis)]
             let linkText = markupString[markupLinkRange.startIndexBracket...markupLinkRange.endIndexBracket]
-            markupString.removeSubrange(markupLinkRange.startIndexParenthesis...markupLinkRange.endIndexParenthesis)
-            markupString.remove(at: markupLinkRange.endIndexBracket)
+            markupString.removeSubrange(markupLinkRange.endIndexBracket...markupLinkRange.endIndexParenthesis)
             markupString.remove(at: markupLinkRange.startIndexBracket)
-            
-            let prevEnd = markupString.index(before: markupLinkRange.endIndexBracket)
+   
+            let endIndexFromEnd: String.Index
+            /// This is added because if markupLinkRange.endIndexBracket is out of bounds, `markupString.index(before: markupLinkRange.endIndexBracket)` crashes even if the index before should be valid.
+            if markupString.indices.contains(markupLinkRange.endIndexBracket) {
+                endIndexFromEnd = markupString.index(before: markupLinkRange.endIndexBracket)
+            } else {
+                endIndexFromEnd = markupString.endIndex
+            }
             let markupLinkInfo = MarkupLinkInfo(
                 startIndexFromEnd: markupString.distance(from: markupString.endIndex, to: markupLinkRange.startIndexBracket),
-                endIndexFromEnd: markupString.distance(from: markupString.endIndex, to: prevEnd),
+                endIndexFromEnd: markupString.distance(from: markupString.endIndex, to: endIndexFromEnd),
                 linkURL: String(linkURL),
                 linkText: String(linkText)
             )

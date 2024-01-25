@@ -15,8 +15,8 @@ public class CVPage1: CVSuperPage {
             phone: "+40739747600",
             location: "Bucharest, Romania",
             email: "amereid92@gmail.com",
-            githubMarkupText: CVMarkupLabelModel(text: "[GitHub](https://github.com/amereid) ", font: UIFont.h1FontRegular),
-            linkedInMarkupText: CVMarkupLabelModel(text: "[LinkedIn](https://www.linkedin.com/in/amer-eid92/) ", font: UIFont.h1FontRegular),
+            githubMarkupText: CVMarkupLabelModel(text: "[GitHub](https://github.com/AnxiousHoliday)", font: UIFont.h1FontRegular),
+            linkedInMarkupText: CVMarkupLabelModel(text: "[LinkedIn](https://www.linkedin.com/in/amer-eid92/)", font: UIFont.h1FontRegular),
             flagImageName: FlagImageNames.romania
         ),
         
@@ -26,7 +26,7 @@ public class CVPage1: CVSuperPage {
         
         HeaderModel(title: "Experience"),
         
-        DetailsModel(titleModel: CVMarkupLabelModel(text: "[Google](https://google.com/) ", font: UIFont.p1FontBold),
+        DetailsModel(titleModel: CVMarkupLabelModel(text: "[Google](https://google.com/)", font: UIFont.p1FontBold),
                      subtitle: "Senior Software Engineer (iOS)",
                      date: "March 2023 - Present",
                      location: "Bucharest, Romania"),
@@ -37,9 +37,9 @@ public class CVPage1: CVSuperPage {
         BulletPointModel(text: "Managed a team focused on integrating and implementing analytic events across the entire Fitbit iOS app"),
         BulletPointModel(text: "Achieved Google's code coverage requirement of over 90% for the `Sleep`, `Stress`, and `Activity` features"),
         BulletPointModel(text: "Was the go to person for the legacy Objective-C codebase and managed to reduce legacy CoreData related crashes by 32% and implemented a data layer API that was used by over 8 feature teams"),
-        BulletPointModel(text: "Led the architecture design and development of the `Sleep`, `Stress`, and `Activity` features for Google's\n[new Fitbit redesign](https://blog.google/products/fitbit/fitbit-app-redesign/) "),
+        BulletPointModel(text: "Led the architecture design and development of the `Sleep`, `Stress`, and `Activity` features for Google's\n[new Fitbit redesign](https://blog.google/products/fitbit/fitbit-app-redesign/)"),
         
-        DetailsModel(titleModel: CVMarkupLabelModel(text: "[Anghami](https://anghami.com/about) ", font: UIFont.p1FontBold),
+        DetailsModel(titleModel: CVMarkupLabelModel(text: "[Anghami](https://anghami.com/about)", font: UIFont.p1FontBold),
                      subtitle: "Lead iOS Engineer",
                      date: "June 2017 - July 2022",
                      location: "Abu Dhabi, United Arab Emirates"),
@@ -53,7 +53,7 @@ public class CVPage1: CVSuperPage {
         BulletPointModel(text: "Spearheaded the conversion of the Video Engine to support HLS video within a week to allow for streaming of the Game of Thrones season 8 premiere for the MENA region"),
         BulletPointModel(text: "Was part of the core team that led to Anghami's IPO - first ever MENA Tech IPO on NASDAQ"),
         
-        DetailsModel(titleModel: CVMarkupLabelModel(text: "[Parkr](https://weareparkr.com) ", font: UIFont.p1FontBold),
+        DetailsModel(titleModel: CVMarkupLabelModel(text: "[Parkr](https://weareparkr.com)", font: UIFont.p1FontBold),
                      subtitle: "Co-founder",
                      date: "June 2016 – June 2017",
                      location: "Beirut, Lebanon"),
@@ -71,9 +71,9 @@ public class CVPage1: CVSuperPage {
         HeaderModel(title: "Skills & Projects"),
         
         BulletPointModel(text: "Programming Languages:  Objective-C  Swift  Kotlin  C++  Python  Java  C PHP"),
-        BulletPointModel(text: "Frameworks & Tools: UIKit  SwiftUI  CoreData  RxCocoa [RxSwift](https://github.com/ReactiveX/RxSwift)  [Realm](https://github.com/realm/realm-swift)  [IGListKit](https://github.com/Instagram/IGListKit)  [PinLayout](https://github.com/layoutBox/PinLayout)  [SnapKit](https://github.com/SnapKit/SnapKit)  [Fastlane](https://fastlane.tools) "),
+        BulletPointModel(text: "Frameworks & Tools: UIKit  SwiftUI  CoreData  RxCocoa [RxSwift](https://github.com/ReactiveX/RxSwift)  [Realm](https://github.com/realm/realm-swift)  [IGListKit](https://github.com/Instagram/IGListKit)  [PinLayout](https://github.com/layoutBox/PinLayout)  [SnapKit](https://github.com/SnapKit/SnapKit)  [Fastlane](https://fastlane.tools)"),
         BulletPointModel(text: "Languages: English  Arabic  Spanish"),
-        BulletPointModel(text: "Passion Projects: [Mimir](https://github.com/amereid/Mimir)  [Mimir Memory Logger](https://github.com/amereid/MimirMemoryLogger) "),
+        BulletPointModel(text: "Passion Projects: [Mimir](https://github.com/AnxiousHoliday/Mimir)  [Mimir Memory Logger](https://github.com/AnxiousHoliday/MimirMemoryLogger)"),
     ]
     
     override func getModels() -> [Any] {
@@ -86,7 +86,7 @@ public class CVPage1: CVSuperPage {
     }
     
     private func setupWaterMarkLabel() {
-        let model = CVMarkupLabelModel(text: "[Created using my own iOS App Project 💻](https://github.com/amereid/amereidcv) ", font: UIFont.p1FontRegular, textAlignment: .center)
+        let model = CVMarkupLabelModel(text: "[Created using my own iOS App Project 💻](https://github.com/AnxiousHoliday/Amer-Eid-CV)", font: UIFont.p1FontRegular, textAlignment: .center)
         let waterMarkLabel = CVMarkupLabel(model: model)
         waterMarkLabel.label.pin.sizeToFit()
         waterMarkLabel.pin.wrapContent()
