@@ -17,24 +17,24 @@ public class CVPage1: CVSuperPage {
             email: "amereid92@gmail.com",
             githubMarkupText: CVMarkupLabelModel(text: "[GitHub](https://github.com/AnxiousHoliday)", font: UIFont.h1FontRegular),
             linkedInMarkupText: CVMarkupLabelModel(text: "[LinkedIn](https://www.linkedin.com/in/amer-eid92/)", font: UIFont.h1FontRegular),
-            flagImageName: FlagImageNames.romania
+            flagImageName: nil
         ),
         
         SummaryModel(text:
-                        "Senior Software Engineer at Google with over 8 years of experience creating and developing complex user focused software applications. Previously led a team of 5 at Anghami to create the # 1 music streaming app in MENA with millions of users. Entrepreneurially trained with a passion for creating things that make people happy."
+                        "Software Engineer with over 8 years of expertise in creating complex user-focused software applications. Currently improving sleep and mental health features at Google, providing benefits to millions of customers. Previously led a team of 5 to develop the #1 music streaming app in MENA with millions of users."
                     ),
         
         HeaderModel(title: "Experience"),
         
-        DetailsModel(titleModel: CVMarkupLabelModel(text: "[Google](https://google.com/)", font: UIFont.p1FontBold),
+        DetailsModel(titleModel: CVMarkupLabelModel(text: "Google", font: UIFont.p1FontBold),
                      subtitle: "Senior Software Engineer (iOS)",
                      date: "March 2023 - Present",
                      location: "Bucharest, Romania"),
-        BulletPointModel(text: "Core member of the [Fitbit](https://www.fitbit.com/global/us/home) Sleep and Mental Health engineering teams"),
+        BulletPointModel(text: "Member of the [Fitbit](https://www.fitbit.com/global/us/home) Sleep and Mental Health engineering teams"),
         BulletPointModel(text: "Refactored the Fitbit homescreen, cutting hitch rates by 34% and render time by over 45%. Achieved through SwiftUI component optimization, background queue utilization for non-UI code, and strategic data caching"),
-        BulletPointModel(text: "Led a team dedicated to integrating and implementing analytic events throughout the entire Fitbit iOS app, collaborating with diverse stakeholders from Product, Legal, Clinical Data, and Engineering teams"),
+        BulletPointModel(text: "Led a cross-functional team to integrate analytic events across the Fibit iOS and Android apps, collaborating with Product, Legal, Clinical Data, and Engineering teams. Achieved a 67% increase in user behavior coverage"),
+        BulletPointModel(text: "Architected and implemented a robust data layer API that was adopted by eight feature teams"),
         BulletPointModel(text: "Served as the primary resource for the legacy Objective-C codebase, successfully mitigating CoreData-related crashes by 32% through the implementation of thread-safe mechanisms"),
-        BulletPointModel(text: "Designed and implemented a robust data layer API that addressed thread safety and performance issues that existed in the legacy Objective-C codebase and was adopted by eight feature teams"),
         BulletPointModel(text: "Led the architecture design and development of the Sleep, Stress, and Activity features, successfully meeting Google's code coverage requirement of over 90% for the [new Fitbit redesign](https://blog.google/products/fitbit/fitbit-app-redesign/)"),
         
         DetailsModel(titleModel: CVMarkupLabelModel(text: "[Anghami](https://anghami.com/about)", font: UIFont.p1FontBold),
@@ -57,7 +57,7 @@ public class CVPage1: CVSuperPage {
                      location: "Beirut, Lebanon"),
         
         BulletPointModel(text: "Co-founded a parking startup for emerging markets and raised over 100,000 USD"),
-        BulletPointModel(text: "Underwent acceleration, programs, and workshops in Beirut and San Francisco"),
+        BulletPointModel(text: "Underwent acceleration, programs and workshops in London, Beirut and San Francisco. Covering aspects such as product management, agile development, strategy and leadership"),
         
         HeaderModel(title: "Education"),
         

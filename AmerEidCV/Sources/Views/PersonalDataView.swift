@@ -75,7 +75,9 @@ class PersonalDataView: CVSubview {
         myLinkedInProfileLabel = CVMarkupLabel(model: model.linkedInMarkupText)
         myGitHubProfileLabel = CVMarkupLabel(model: model.githubMarkupText)
 
-        flagImageView.image = UIImage(named: model.flagImageName)
+        if let flagImageName = model.flagImageName {
+            flagImageView.image = UIImage(named: flagImageName)
+        }
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         commonInit()
     }

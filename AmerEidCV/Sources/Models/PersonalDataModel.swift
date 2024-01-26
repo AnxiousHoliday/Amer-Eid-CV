@@ -14,5 +14,5 @@ struct PersonalDataModel {
     let email: String
     let githubMarkupText: CVMarkupLabelModel
     let linkedInMarkupText: CVMarkupLabelModel
-    let flagImageName: String
+    let flagImageName: String?
 }
